@@ -4242,7 +4242,7 @@ tbody.collapse.in {
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: #fff;
+  color: #c5c02e;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -7962,7 +7962,32 @@ a.skip-link {
 .fa-percent:before {
   content: ""; }
 
-.fortest {
-  font-size: 20px; }
+#main-menu li a {
+  font-weight: bold; }
+
+.navbar-toggle, .icon-bar {
+  border: 1px solid beige; }
+
+@media screen and (min-width: 30em) {
+  .main-menu-logo {
+    width: 5em; } }
+@media screen and (min-width: 62em) {
+  .main-menu-logo {
+    width: auto; }
+
+  #main-menu {
+    margin-top: 20px; } }
+body {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #94d6d5), color-stop(50%, #efefef));
+  background-image: -moz-linear-gradient(#94d6d5, #efefef 50%);
+  background-image: -webkit-linear-gradient(#94d6d5, #efefef 50%);
+  background-image: linear-gradient(#94d6d5, #efefef 50%);
+  color: #0c3f38; }
+
+a {
+  color: #0c3f38; }
+
+h1, h2, h3 {
+  color: #0c3f38; }
 
 /*# sourceMappingURL=theme.css.map */
