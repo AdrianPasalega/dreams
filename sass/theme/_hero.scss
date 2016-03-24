@@ -1,0 +1,29 @@
+.hero{
+  margin-top: 30px;
+  text-align: center;
+  h1{
+    font-weight: normal;
+  }
+  .byline{
+    font-family: Roboto;
+    font-weight: normal;
+  }
+  .btn{
+
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-size: .8em;
+    color: #fff;
+    display: inline-block;
+    background: $lightred;
+    padding: 5px 30px;
+    transition: all 1s ease;
+    &:hover{
+      background-color: $darkred;
+      transition: background-color 2s ease-out;
+    }
+  }
+}
+
+
