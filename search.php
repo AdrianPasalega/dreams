@@ -6,56 +6,39 @@
  */
 
 get_header(); ?>
-<div class="wrapper search-wrapper">
-    
-    <div class="container">
+    <div class="wrapper" id="page-wrapper">
 
-        <div class="row">
-        
-            <section id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
-                
-                <main id="main" class="site-main" role="main">
+        <div  id="content" class="container">
 
-                <?php if ( have_posts() ) : ?>
+            <div class="row">
 
-                    <header class="page-header">
+                <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
 
-                        <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'understrap' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-                        
-                    </header><!-- .page-header -->
+                    <main id="main" class="site-main" role="main">
 
-                    <?php /* Start the Loop */ ?>
-                    <?php while ( have_posts() ) : the_post(); ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
 
-                        <?php
-                        /**
-                         * Run the loop for the search to output the results.
-                         * If you want to overload this in a child theme then include a file
-                         * called content-search.php and that will be used instead.
-                         */
-                        get_template_part( 'loop-templates/content', 'search' );
-                        ?>
+                            <?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-                    <?php endwhile; ?>
+                            <?php
+                            // If comments are open or we have at least one comment, load up the comment template
+                            if ( comments_open() || get_comments_number() ) :
+                                comments_template();
+                            endif;
+                            ?>
 
-                    <?php understrap_paging_nav(); ?>
+                        <?php endwhile; // end of the loop. ?>
 
-                <?php else : ?>
+                    </main><!-- #main -->
 
-                    <?php get_template_part( 'loop-templates/content', 'none' ); ?>
+                </div><!-- #primary -->
 
-                <?php endif; ?>
+                <?php get_sidebar(); ?>
 
-                </main><!-- #main -->
-                
-            </section><!-- #primary -->
+            </div><!-- .row -->
 
-            <?php get_sidebar(); ?>
+        </div><!-- Container end -->
 
-        </div><!-- .row -->
-    
-    </div><!-- Container end -->
-    
-</div><!-- Wrapper end -->
+    </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

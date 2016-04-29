@@ -7,7 +7,7 @@
  * @package understrap
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,19 +26,24 @@
 <div id="page" class="hfeed site">
     
     <!-- ******************* The Navbar Area ******************* -->
+    <header>
     <div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
         <nav class="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-                            
+
             <div class="navbar">
 
                 <div class="container">
 
                     <div class="row">
 
-                        <div class="col-xs-12">
+
+
 
                             <div class="navbar-header">
+
+                                    <div>
+
 
                                 <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -49,36 +54,53 @@
                                 </button>
 
                                 <!-- Your site title as branding in the menu -->
+
                                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo-header-dreams.png" class="main-menu-logo" />
                                 </a>
                             </div>
-
+                        </div>
                             <!-- The WordPress Menu goes here -->
+
                             <?php wp_nav_menu(
                                     array(
                                         'theme_location' => 'primary',
                                         'container_class' => 'collapse navbar-collapse navbar-responsive-collapse',
-                                        'menu_class' => 'nav navbar-nav  navbar-right',
+                                        'menu_class' => 'nav navbar-nav  ',
                                         'fallback_cb' => '',
                                         'menu_id' => 'main-menu',
                                         'walker' => new wp_bootstrap_navwalker()
                                     )
                             ); ?>
 
-                        </div> <!-- .col-md-11 or col-md-12 end -->
+
+
+
+                            <div class="header-search">
+                                <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class=" search-menu-input" name="s" id="s" placeholder="<?php esc_attr_e( 'Search &hellip;', 'understrap' ); ?>" />
+			                            <span class="input-group-btn">
+                                            <button type="button" class="searcher" name="submit"  value="<?php esc_attr_e( 'Search', 'understrap' ); ?>" />
+			                                </span>
+                                    </div>
+                                </form>
+                            </div>
+
+
+                  <!-- /input-group --><!-- .col-md-11 or col-md-12 end -->
 
                     </div> <!-- .row end -->
 
                 </div> <!-- .container -->
-                
+
             </div><!-- .navbar -->
-            
+
         </nav><!-- .site-navigation -->
-        
+
     </div><!-- .wrapper-navbar end -->
 
-
+    </header>
 
 
 

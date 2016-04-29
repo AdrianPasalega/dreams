@@ -21,11 +21,6 @@
                 </div>
                 <hr/>
                 <div class="form-group">
-                    <label for="url"><?php _e( 'Website', 'understrap' ); ?></label>
-                    <input class="form-control" type="url" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-                </div>
-                <hr/>
-                <div class="form-group">
                     <label><?php _e( 'Your Comment', 'understrap' ); ?> <small class="text-danger">*</small></label>
                     <textarea class="form-control" name="comment" id="comment" style="width: 100%;" rows="10" tabindex="4"></textarea>
                 </div>

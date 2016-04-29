@@ -1,0 +1,129 @@
+
+
+.photo-child {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 0;
+  h2 {
+    font-size: 1.7em;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  img {
+    max-width: 100%;
+  }
+}
+.nav-tabs {
+  width: 95%;
+  li {
+    font-weight: bold;
+  }
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  border: none;
+  color: $lightred;
+
+}
+.nav-tabs>li>a:hover {
+  background: transparent;
+  border-color: transparent;
+}
+.nav-tabs>li.active>a:hover {
+  color: $lightred;
+}
+.nav-tabs>li.active>a {
+  color: $lightred;
+}
+.nav-tabs>li>a:hover {
+  color: $darkgreen;
+}
+
+a:focus {
+  outline: none;
+}
+@media screen and (min-width: 650px){
+  .nav-tabs {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .media {
+    .breadcrumbs {
+      .nav-breadcrumbs {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .photo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .photo-child {
+      border: 1px solid $lightblue;
+      display: flex;
+      width: calc(50% - 1.4em);
+      padding: 10px;
+      margin-left: 0;
+      .photo-preview-content {
+        margin-left: 10px;
+        p {
+          font-size: 1em;
+        }
+      }
+      h2 {
+        font-size: 1em;
+      }
+      a {
+        display: flex;
+      }
+      img {
+        width: 110px;
+        height: 100px;
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border-bottom: 3px solid $lightred;
+  }
+  .nav-tabs {
+    margin: 0 auto;
+  }
+  .nav-tabs>li {
+    float: none;
+    display: inline-block;
+    border: transparent;
+  }
+  .media {
+    .breadcrumbs {
+      .nav-breadcrumbs {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .media-container {
+    background: #fff;
+    box-shadow: 0 0 5px 1px rgba(175, 176, 176, 0.9);
+    border-radius: 5px;
+  }
+
+  .photo-wrapper {
+    background: #fff;
+    padding: 30px;
+    .photo-child {
+      width: 48%;
+      margin-bottom: 20px;
+      h2 {
+        font-size: 1.2em;
+      }
+      img {
+        width: 150px;
+        height: 140px;
+      }
+    }
+  }
+}

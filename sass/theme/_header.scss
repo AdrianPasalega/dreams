@@ -2,21 +2,116 @@
   font-weight: bold;
 }
 
+.navbar{
+  padding-top: 40px;
+  background: $darkgreen;
+  li a{
+    color: #fff;
+  }
+  min-height: 110px;
+  .col-lg-12{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .navbar-toggle, .icon-bar{
   border: 1px solid beige;
 }
 
-@media screen and (min-width: 30em) {
-  .main-menu-logo{
-    width: 5em;
+
+.navbar-brand {
+  padding-top: 10px;
+  display: block;
+  img{
+    width: 100px;
+
   }
 }
 
-@media screen and (min-width: 62em) {
-  .main-menu-logo{
-    width: auto;
+
+.header-search {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .toggle-search{
+    display: block;
   }
-  #main-menu{
-    margin-top: 20px;
+  form {
+    background: darken($lightred, 5);
+    input[type='text'] {
+      border: none;
+      border-radius: 0;
+      width: 100%;
+      animation-name: expand-width;
+      animation-duration: .4s;
+
+    }
+  }
+}
+  .search-menu-input {
+    height: 34px;
+    display: none;
+  }
+
+
+.searcher {
+  float: right;
+  width: 30px;
+  display: block;
+  height: 34px;
+  background: url('../images/search-icon.png');
+  background-size: 30px;
+  background-repeat:no-repeat ;
+  border: none;
+}
+@keyframes expand-width {
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+@media screen and (min-width: 767px) {
+  .navbar-header{
+    margin-right: auto;
+  }
+  .navbar-brand{
+    img{
+      width: 120px;
+    }
+  }
+  .navbar {
+    background: transparent;
+    .container{
+      padding-left: 0;
+      padding-right: 0;
+
+    .row {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+    }}
+    .header-search{
+      position: relative;
+      width: auto;
+      form{
+        background: transparent;
+      display: inline-block;
+        float: right;
+        margin-top: 15px;
+        input[type='text']{
+          background: transparent;
+          border-bottom: 1px solid #000;
+        }
+      }
+
+
+    }
+    .input-group-btn{
+      width: 0;
+    }
+
   }
 }

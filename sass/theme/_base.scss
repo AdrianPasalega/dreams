@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
+  font-family: $font-main, serif;
   line-height: 1;
 }
 ol, ul {
@@ -102,6 +103,6 @@ h1, h2, h3, h4, h5{
 
 a{
   color: $font-color;
-  font-family: Roboto;
+  font-family: $font-main;
 }
 

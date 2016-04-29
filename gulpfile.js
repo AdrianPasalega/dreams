@@ -17,15 +17,22 @@ var merge2 = require('merge2');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 
+
+
+
+
 // Run: 
 // gulp sass
 // Compiles SCSS files in CSS
 gulp.task('sass', function () {
-    gulp.src('./sass/*.scss')
+     gulp.src('./sass/*.scss')
         .pipe(plumber())
         .pipe(sass())
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./css'))
+
 });
+
+
 
 // Run: 
 // gulp watch
@@ -33,6 +40,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/theme.css', ['cssnano']);
+
 });
 
 // Run: 
@@ -43,8 +51,8 @@ gulp.task('cssnano', ['cleancss'], function(){
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     .pipe(cssnano({discardComments: {removeAll: true}}))
-    .pipe(gulp.dest('./css/'));
-}); 
+    .pipe(gulp.dest('./css/'))
+});
 
 gulp.task('cleancss', function() {
   return gulp.src('./css/*.min.css', { read: false }) // much faster 
@@ -113,3 +121,5 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + '_s/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 });
+
+gulp.task('default', ['watch', 'scripts']);

@@ -1,123 +1,251 @@
-main{
-  margin:130px 0 130px 0;
-  .content{
-    position: relative;
+main {
+  .content {
+    margin: 40px 0;
     background: #fff;
-    margin-bottom: 10px;
-    box-shadow: 0 0 5px 1px rgba(175,176,176,.9);
+    padding: 20px 20px;
     border-radius: 5px;
-    padding:  20px;
-    .tag{
-      text-align: center;
-      padding: 10px 0;
-      position: absolute;
-      font-family: Roboto;
-      text-transform: uppercase;
-      color: #fff;
-      background: $mustard;
-      font-size: .8em;
-      width: 180px;
-      border-radius: 5px;
-      left: -9px;
-      top: 30px;
-      &::after{
-        position: absolute;
-        content: "";
-        display: block;
-        width: 0; height: 0;
-        top: 32px;
-        left: 1px;
-        border-left: 8px solid transparent;
-        border-top: 8px solid rgba(75,76,76,.7);
-        border-bottom: 8px solid transparent;
-      }
-
+    h2+p {
+      margin: 1em 0;
+      line-height: 1.6;
+      font-size: 1em;
     }
 
-  }
-  .events{
+  } //CONTENT
 
-    text-align: center;
-    article{
-      padding-top: 20px;
-      width: 60%;
-      margin: 0 auto;
-      ul li{
-        line-height: 3;
-        display: inline-block;
-      }
-      ul li a{
-        color: $blue;
-        padding: 0 10px;
-        i{
-          margin-right: 5px;
-        }
-      }
+  .main-evt {
+  text-align: center;
+    a {
+      color: $blue;
     }
-    img{
-      width: 100%;
-    }
-
   }
 
-  .articles{
-    article{
-
-      margin-top: 30px;
-      margin-bottom: 30px;
-      padding-right: 4%;
-      a{
-        line-height: 2.5;
+  .articles {
+    article {
+      margin: 10px 0;
+      h2 {
+        font-size: 1.4em;
+        padding-top: .5em
+      }
+      a {
         color: $lightred;
-        text-transform: uppercase;
         font-weight: bold;
-      }
-      @include clearfix;
-      img{
-
         display: block;
-        width: 200px;
-        height: 130px;
-        margin-right: 20px;
-        float: left;
+        padding-top: 1em;
       }
     }
-
   }
+}//MAIN
 
-  .testimonials{
-    @include clearfix;
-    aside{
+.tag {
+  box-shadow: 1px 1px 2px gray;
+  border-radius: 5px;
+  font-family: $font-heading;
+  background: $mustard;
+  text-transform: uppercase;
+  color: #fff;
+  padding: .7em 0;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: -13%;
+  margin-left: 3px;
+  font-size: 1em;
+}
 
-      text-align: center;
-      width: 23%;
-      float: left;
-      margin: 20px 10px 0 10px;
+.index-event-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 1em;
+  li {
+    padding-right: .5em;
+    padding-top: .5em;
+  }
+  i{
+    margin-right: 10px;
+  }
+}
 
-      margin-bottom: 30px;
-      i{
-        color: $offwhite;
-        margin-bottom: -10px;
-      }
-      blockquote cite{
-        text-transform: uppercase;
-        font-family: Roboto;
-        font-weight: bold;
-        line-height: 2.2;
-      }
-      blockquote .bqstart{
-        font-family: 'Times New Roman', serif;
-        font-size: 200%;
-      }
-      p{
-        font-size: 1em;
-        font-family: Roboto;
-        margin-top: -20px;
-        line-height: 1.5;
-      }
+.testimonials {
+  aside {
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    .author {
+      padding-top: 1em;
+      font-size: 1em;
+      font-weight: bold;
     }
+    p{
+      line-height: 1.6;
 
+    }
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .tag {
+    width: 203px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .tag {
+    margin-top: -37px;
+    font-size: .8em;
   }
 
 }
 
+@media screen and (max-width: 1200px) {
+  .size-event-index-image{
+    height: auto;
+  }
+}
+
+@media  screen and (min-width: 500px) {
+.articles{
+  article{
+    text-align: left;
+    img{
+      width: 30%;
+      height: auto;
+      float: left;
+      margin-right: 10px;
+  }
+    .blog-content{
+      width: 65%;
+      margin-left: auto;
+    }
+  }
+}
+}
+
+@media  screen and (min-width: 767px) {
+  main {
+  .content{
+    box-shadow: 0 0 5px 1px rgba(175,176,176,.9);
+  }
+    .main-evt {
+      text-align: center;
+      article {
+        margin-top: 30px;
+        p{
+          padding: 0 4em;
+
+        }
+      }
+    }
+  }
+  .index-event-info {
+    justify-content: center;
+    li {
+      padding-right: 1em;
+    }
+  }
+  .tag {
+    box-shadow: none;
+    width: 180px;
+    margin-top: 20px;
+    margin-left: -30px;
+    position: absolute;
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 0; height: 0;
+      top:28px;
+      left: 2px;
+      border-left: 8px solid transparent;
+      border-top: 8px solid rgba(75,76,76,.7);
+      border-bottom: 8px solid transparent;
+    }
+  }
+
+
+  .articles {
+
+    article {
+      display: flex;
+      flex-wrap: wrap;
+      img {
+        max-width: 250px;
+        flex: 0 0 250px;
+        align-self: flex-start;
+      }
+      .blog-content {
+        flex: 1;
+        margin-left: 1em;
+      }
+    }
+  }
+
+  .testimonials {
+    aside {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+
+
+@media screen and (min-width: 900px) {
+  .tag {
+    margin-left: -31px;
+    &::after {
+    top: 31px;
+    }
+  }
+
+  .testimonials {
+    display: flex;
+    justify-content: space-between;
+    aside {
+      text-align: center;
+      flex: 0 0 calc(25% - .5em);
+      display: flex;
+      flex-flow: column wrap;
+      p {
+        font-size: .9em;
+      }
+      .author {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tag {
+    &::after {
+      top: 32px;
+      left: 2px;
+    }
+  }
+  .articles {
+    article:first-of-type {
+      margin-top: 30px;
+    }
+  }
+  .index-event-info {
+    padding-bottom: 2em;
+  }
+  main {
+    .main-evt {
+      article {
+        width: 60%;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        p {
+          padding: 0;
+        }
+      }
+
+    }
+  }
+  .testimonials {
+    margin-top: 30px;
+  }
+}

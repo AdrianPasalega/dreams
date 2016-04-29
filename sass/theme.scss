@@ -29,6 +29,7 @@ Import all needed 3rd party sass files plus your own style and variables
 ***************************************************************** */
 
 // @import "../bower_components/_s/sass/style";
+
 @import "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
 @import "../src/sass/bootstrap-sass/bootstrap";
 @import "understrap/understrap";
@@ -43,5 +44,16 @@ Import all needed 3rd party sass files plus your own style and variables
 @import "theme/base";
 @import "theme/hero";
 @import "theme/main";
+@import "theme/footer";
+@import "theme/media_photos";
+@import "theme/events";
+@import "theme/event";
+@import "theme/contact";
+@import "theme/single_post";
+@import "theme/blog";
+@import "theme/resources";
+@import "theme/resources_archive";
+@import "theme/support";
+@import "theme/about";
 
 

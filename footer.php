@@ -11,29 +11,26 @@
 <?php get_template_part('widget-templates/footerfull'); ?>
 
 <div class="wrapper" id="wrapper-footer">
-    
+
     <div class="container">
 
-        <div class="row">
 
-            <div class="col-md-12">
-    
-                <footer id="colophon" class="site-footer" role="contentinfo">
 
-                    <div class="site-info">
-                        <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ), 'WordPress' ); ?></a>
-                        <span class="sep"> | </span>
-                        <?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), 'understrap', '<a href="http://understrap.com/" rel="designer">understrap.com</a>' ); ?>
-                    </div><!-- .site-info -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <p class="s"><small>	&copy; 2016 Dreams for Life</small></p>
+            <div class="form-inline">
+                <?php echo do_shortcode('[contact-form-7 id="1813" title="newsletter"]'); ?>
+            </div>
+            <div class="follow">
+                <p>urmareste-ne pe<a class="icon"><i class="fa fa-facebook fa-lg"></i></a></p>
 
-                </footer><!-- #colophon -->
+            </div>
 
-            </div><!--col end -->
+        </footer><!-- #colophon -->
 
-        </div><!-- row end -->
-        
+
     </div><!-- container end -->
-    
+
 </div><!-- wrapper end -->
 
 </div><!-- #page -->
