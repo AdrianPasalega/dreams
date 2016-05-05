@@ -22,7 +22,7 @@
                 <?php echo do_shortcode('[contact-form-7 id="1813" title="newsletter"]'); ?>
             </div>
             <div class="follow">
-                <p>urmareste-ne pe<a class="icon"><i class="fa fa-facebook fa-lg"></i></a></p>
+                <p>urmareste-ne pe<a class="icon"><i class="fa fa-facebook"></i></a></p>
 
             </div>
 

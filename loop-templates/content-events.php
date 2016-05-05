@@ -13,17 +13,17 @@
         <ul class="post-event-info">
             <?php if (get_post_meta( get_the_ID(), 'Date', true )) {
                 $a =  get_post_meta( get_the_ID(), 'Date', true );
-                echo "<li><a href=\"#\"><i class=\"fa fa-calendar\"></i>$a </a></li>" ;
+                echo "<li><i class=\"fa fa-calendar\"></i>$a</li>" ;
             }
             ?>
             <?php if (get_post_meta( get_the_ID(), 'Time', true )) {
                 $a =  get_post_meta( get_the_ID(), 'Time', true );
-                echo "<li><a href=\"#\"><i class=\"fa fa-clock-o\"></i>$a </a></li>" ;
+                echo "<li><i class=\"fa fa-clock-o\"></i>$a</li>" ;
             }
             ?>
             <?php if (get_post_meta( get_the_ID(), 'Location', true )) {
                 $a =  get_post_meta( get_the_ID(), 'Location', true );
-                echo "<li><a href=\"#\"><i class=\"fa fa-map-marker\"></i>$a </a></li>" ;
+                echo "<li><i class=\"fa fa-map-marker\"></i>$a</li>" ;
             }
             ?>
 

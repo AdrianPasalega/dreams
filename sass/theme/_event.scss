@@ -1,6 +1,6 @@
 #event-post {
   margin-top: 30px;
-  .category-event {
+  .type-events {
     border-radius: 5px;
     background: #fff;
     padding: 10px;
@@ -104,12 +104,10 @@
   flex-wrap: wrap;
   li{
     padding: .5em .5em .5em 0;
-    a{
-      color: $blue;
-    }
+    color: $blue;
   }
   i{
-    margin-right: 2px;
+    margin-right: 5px;
   }
 }
 
@@ -137,7 +135,7 @@
 }
 @media screen and (min-width: 765px) {
   #event-post{
-    .category-event {
+    .type-events {
       box-shadow: 0 0 5px 1px rgba(175, 176, 176, .9);
     }
   }
@@ -146,7 +144,7 @@
 @media screen and (min-width: 989px){
 
   #event-post{
-    .category-event {
+    .type-events {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;

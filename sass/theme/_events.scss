@@ -24,6 +24,9 @@
 
 .events-wrapper{
   .type-events{
+    a{
+      text-decoration: none;
+    }
     img{
       height: auto;
     }
@@ -61,7 +64,9 @@
     }
   }
 }//events-page
-
+.link-headline:hover{
+  color: $lightred;
+}
 .headline:hover {
   color: $lightred;
   text-decoration: none;
@@ -114,6 +119,12 @@
   .type-events {
     display: flex;
     flex-flow: column wrap;
+  }
+}
+.events-info li{
+  color: $blue;
+  i{
+    margin-right: 5px;
   }
 }
 
@@ -170,9 +181,9 @@
 @media screen and (min-width: 992px) {
   .events-info {
 li{
-  a{
-    font-size: 1.2em;
-  }
+
+  font-size: 1em;
+
 }  }
 }
 
@@ -190,7 +201,6 @@ li{
     .events-info {
       justify-content: space-between;
       li {
-        font-size: .9em;
         display: flex;
       }
     }

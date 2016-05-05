@@ -5,27 +5,25 @@
  * @package understrap
  */
 
+
 get_header(); ?>
-    <div class="wrapper" id="page-wrapper">
+    <div class="wrapper search-result" id="search-wrapper">
 
         <div  id="content" class="container">
 
             <div class="row">
 
-                <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
-
+                <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area col-lg-9">
+                <div class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+				</div>
                     <main id="main" class="site-main" role="main">
 
                         <?php while ( have_posts() ) : the_post(); ?>
 
-                            <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+                            <?php get_template_part( 'loop-templates/content', 'search-custom' ); ?>
 
-                            <?php
-                            // If comments are open or we have at least one comment, load up the comment template
-                            if ( comments_open() || get_comments_number() ) :
-                                comments_template();
-                            endif;
-                            ?>
+
 
                         <?php endwhile; // end of the loop. ?>
 
@@ -40,5 +38,6 @@ get_header(); ?>
         </div><!-- Container end -->
 
     </div><!-- Wrapper end -->
+</div>
 
 <?php get_footer(); ?>

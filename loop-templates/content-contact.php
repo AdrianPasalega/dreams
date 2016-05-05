@@ -9,6 +9,7 @@
 <h1><?php the_title() ?></h1>
 
 <div class="contact">
+
     <?php the_content(); ?>
 
 
@@ -30,6 +31,7 @@
         }
         ?>
     </ul>
+
     <div id="googleMap"></div>
 
 </div>

@@ -125,3 +125,105 @@ function add_dots($string){
     }
     }
 
+function filter_search($query) {
+    if ($query->is_search) {
+        $query->set('post_type', array('post', 'resources', 'events'));
+    };
+    return $query;
+};
+add_filter('pre_get_posts', 'filter_search');
+
+function my_smart_search( $search, &$wp_query ) {
+    global $wpdb;
+
+    if ( empty( $search ))
+        return $search;
+
+    $terms = $wp_query->query_vars[ 's' ];
+    $exploded = explode( ' ', $terms );
+    if( $exploded === FALSE || count( $exploded ) == 0 )
+        $exploded = array( 0 => $terms );
+
+    $search = '';
+    foreach( $exploded as $tag ) {
+        $search .= " AND (
+            (wp_posts.post_title LIKE '%$tag%')
+            OR (wp_posts.post_content LIKE '%$tag%')
+            OR EXISTS
+            (
+                SELECT * FROM wp_comments
+                WHERE comment_post_ID = wp_posts.ID
+                    AND comment_content LIKE '%$tag%'
+            )
+            OR EXISTS
+            (
+                SELECT * FROM wp_terms
+                INNER JOIN wp_term_taxonomy
+                    ON wp_term_taxonomy.term_id = wp_terms.term_id
+                INNER JOIN wp_term_relationships
+                    ON wp_term_relationships.term_taxonomy_id = wp_term_taxonomy.term_taxonomy_id
+                WHERE taxonomy = 'post_tag'
+                    AND object_id = wp_posts.ID
+                    AND wp_terms.name LIKE '%$tag%'
+            )
+        )";
+    }
+
+    return $search;
+}
+
+add_filter( 'posts_search', 'my_smart_search', 500, 2 );
+
+
+function cf_search_join( $join ) {
+    global $wpdb;
+
+    if ( is_search() ) {
+        $join .=' LEFT JOIN '.$wpdb->postmeta. ' ON '. $wpdb->posts . '.ID = ' . $wpdb->postmeta . '.post_id ';
+    }
+
+    return $join;
+}
+add_filter('posts_join', 'cf_search_join' );
+
+/**
+ * Modify the search query with posts_where
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_where
+ */
+function cf_search_where( $where ) {
+    global $pagenow, $wpdb;
+
+    if ( is_search() ) {
+        $where = preg_replace(
+            "/\(\s*".$wpdb->posts.".post_title\s+LIKE\s*(\'[^\']+\')\s*\)/",
+            "(".$wpdb->posts.".post_title LIKE $1) OR (".$wpdb->postmeta.".meta_value LIKE $1)", $where );
+    }
+
+    return $where;
+}
+add_filter( 'posts_where', 'cf_search_where' );
+
+/**
+ * Prevent duplicates
+ *
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/posts_distinct
+ */
+function cf_search_distinct( $where ) {
+    global $wpdb;
+
+    if ( is_search() ) {
+        return "DISTINCT";
+    }
+
+    return $where;
+}
+add_filter( 'posts_distinct', 'cf_search_distinct' );
+
+
+/**
+ * Include posts from authors in the search results where
+ * either their display name or user login matches the query string
+ *
+ * @author danielbachhuber
+ */
