@@ -6,13 +6,15 @@
  */
 
 get_header(); ?>
+
+
+
 <div class="wrapper-for-post" id="single-wrapper">
-
     <div  id="content" class="container">
-
+        <div id="weglot_here"></div>
         <div class="row">
 
-            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> col-lg-9 content-area page-for-post">
+            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> col-lg-9 content-area page-for-post box-shadow">
 
                 <main id="main" class="site-main" role="main">
 
@@ -29,7 +31,10 @@ get_header(); ?>
                         ?>
 
                     <?php endwhile; // end of the loop. ?>
-
+                    <?php
+                    global $post;
+                    $post_slug=$post->post_name;
+                    ?>
                 </main><!-- #main -->
 
             </div><!-- #primary -->

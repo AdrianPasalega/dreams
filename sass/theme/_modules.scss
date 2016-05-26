@@ -1,0 +1,168 @@
+
+.icon {
+  display: inline-block;
+  background: rgb(59,89,151);
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  border-radius: 50%;
+.fa-facebook{
+  color: #fff;
+}
+}
+
+
+
+.mashsb-box .mashsb-buttons a{
+  padding: 0;
+  float: none;
+}
+
+.mashicon-facebook{
+  background: none;
+.icon{
+  line-height: 1.6em;
+}
+  .text{
+    font-size: 1em;
+  }
+}
+
+[class^="mashicon-"] .text{
+  color: $darkgreen;
+  margin-left: 5px;
+}
+
+[class^="mashicon-"] .icon::before{
+  float: none;
+  margin-right: auto;
+  font-size: .9em;
+}
+
+.post-tags{
+  padding: 10px 0;
+  a{
+    border-radius: 15px;
+    font-size: .9em;
+    padding: .3em .5em;
+    margin: .2em;
+    border: 1px solid #d7d7d7;
+    display: inline-block;
+  }
+  small{
+    display: none;
+  }
+i{
+  color: #545454;
+}
+}
+
+.social-media{
+  padding-top: 2em;
+}
+
+.no-img-blog{
+  .social-media-p{
+    padding-left: .5em;
+  }
+}
+
+.social-media-p{
+  padding-left: 2.3em;
+}
+
+.back-to-top{
+  position: fixed;
+  bottom: 1em;
+  left:1em;
+  display: none;
+  transition: bottom ease-out 400ms;
+  z-index: 100;
+  .fa{
+    color: $blue;
+    font-size: 2.5em;
+  }
+}
+.back-to-top.display{
+  display: block;
+}
+.back-to-top.slide-out{
+  bottom: -2.5em;
+
+}
+
+@media screen and (min-width: 400px) {
+  .social-media{
+    padding-bottom: 1em;
+  }
+  .social-media-p{
+    padding-left:2em;
+    padding-bottom: 1em;
+  }
+  .no-img-blog{
+    .social-media-p{
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+    .post-tags{
+      padding: 10px 20px;
+    }
+
+  .social-media{
+    padding: 4em 0 1em 2em;
+  }
+  .social-media-p{
+    padding-left: 2.5em;
+  }
+  .no-img-blog{
+    .social-media-p{
+      padding-left: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 901px){
+  .post-tags{
+    a{
+      font-size: .8em;
+    }
+  }
+  .social-media{
+    padding-left: 1.6em;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .social-media{
+    padding-left: 1em;
+  }
+
+}
+
+@media screen and (min-width: 1200px){
+  .post-tags{
+    padding: 15px 20px;
+    small{
+      display: inline-block;
+      margin-right: 5px;
+      font-weight: 500;
+      font-size: .9em;
+    }
+  }
+  .social-media{
+    padding-left: 4em;
+  }
+  .social-media-p{
+    padding-left: 4.6em;
+  }
+}
+
+@media  screen and (min-width: 1400px) {
+
+  .back-to-top{
+    left: 5em;
+  }
+}

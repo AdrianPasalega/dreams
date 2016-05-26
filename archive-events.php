@@ -10,7 +10,9 @@
 get_header(); ?>
 
 <div class="events-page">
+
     <div  class="container">
+
         <div class="events-wrapper">
 
 

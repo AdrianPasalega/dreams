@@ -1,9 +1,7 @@
+
 .support-main {
-  margin-top: 30px;
   background: #fff;
-  .container {
-    padding: 0;
-  }
+
   .wp-post-image {
     height: auto;
   }
@@ -159,18 +157,26 @@
   }
 }
 
+
+@media screen and (max-width: 769px){
+  .support-main{
+    .container{
+      padding: 0;
+    }
+  }
+}
 @media screen and (min-width: 769px) {
   .support-main {
     background: transparent;
     .wp-post-image {
       border-radius: 5px;
     }
-    .container {
-      padding: 0 15px;
+    .box-shadow{
       background: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 5px 1px hsla(180,1%,69%,.9);
     }
+  }
+  .support-thumbnail.row{
+    margin: 0;
   }
   .voluntar{
     border-radius: 5px;
@@ -233,89 +239,101 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .to-know-last{
+    background-image: none !important;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .support-main{
-    .container{
-      padding: 0;
+  #panel-1834-2-0-1 {
+    margin-right: 7%;
+  }
+  .to-know-last {
+    .textwidget {
+      margin-left: 215px;
+      padding: 50px 0;
+    }
+  }
+  .support-main {
+    .v-byline {
+      padding: 30px 220px;
+    }
+    .form-one {
+      margin-left: 200px;
+    }
+    .form-two {
+      margin-right: 100px;
+    }
+    .container {
       position: relative;
     }
-    .wp-post-image{
+    .wp-post-image {
       width: 100%;
     }
-    h3{
+    h3 {
       font-size: 1.2em;
     }
   }
-  .v-headline{
+  .v-headline {
     font-size: 2em;
   }
-  .voluntar{
+  .voluntar {
     padding: 0;
     padding-bottom: 100px;
   }
-  .support-thumbnail.row{
-    margin:0;
+  .support-thumbnail.row {
+    margin: 0;
   }
-  #pg-1834-1{
+  #pg-1834-1 {
     margin: 0;
     padding: 0 5%;
   }
-  .v-col{
+  .v-col {
     padding: 0 10px;
   }
-  #pg-1834-2{
-      background: #f6f6f6;
+  #support-to-know {
+    background: #f6f6f6;
     border-top: 1px solid #d3d3d3;
-    padding: 0 20%;
     border-bottom: 1px solid #d3d3d3;
-
+    position: relative;
   }
-  #pgc-1834-2-0{
-padding-top: 40px;
+  #pgc-1834-2-0 {
+    padding-top: 40px;
   }
-  .v-byline h2{
+  .v-byline h2 {
     font-size: 1.2em;
   }
-  .v-form-info{
+  .v-form-info {
     padding: 15px;
     background: #fafafa;
-    h4{
+    h4 {
       font-size: 1em;
       padding-top: 15px;
     }
-    p{
+    p {
       font-size: .8em;
       line-height: 1.6;
     }
   }
 
-  #panel-1834-2-0-3.so-panel{
-    margin-bottom: 0;  }
-  #panel-1834-2-0-4 {
-    display: inline-block;
-    width: 1100px;
-    height: 600px;
-    position: absolute;
-    bottom: 337px;
-    left: 0;
+  #panel-1834-2-0-3.so-panel {
+    margin-bottom: 0;
+  }
 
-
-
-
-    img {
-        width: 90%;
-        height: auto;
-        opacity: .3;
-        margin-top: auto;
-        position: absolute;
-        bottom: 0;
-      }
-    }
-  #panel-1834-3-0-0{
+  #panel-1834-3-0-0 {
     background: #fff;
     padding-top: 40px;
 
   }
+  .voluntar {
+    #support-to-know {
+      margin-left: 0;
+      margin-right: 0;
+      .to-know-last{
+        margin-left:-15px;
+      }
 
+    }
   }
-
+}

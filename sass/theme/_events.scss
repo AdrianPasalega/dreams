@@ -1,26 +1,6 @@
 .events-img-details{
   margin-top:auto;
 }
-.breadcrumbs {
-  .nav-breadcrumbs {
-    display: flex;
-    margin-bottom: 10px;
-    li {
-      padding-right: 7px;
-      padding-left: 7px;
-      border-right: 2px solid $darkgreen;
-    }
-    li:first-of-type {
-      padding-left: 0;
-    }
-    li:last-of-type {
-      border-right: 0;
-    }
-  }
-  .active {
-    color: #fff;
-  }
-}
 
 .events-wrapper{
   .type-events{
@@ -34,13 +14,12 @@
 }
 
 .events-page {
-  margin-top: 30px;
   .nav-breadcrumbs {
     margin-bottom: 10px;
   }
   .type-events {
     background: #fff;
-    margin: 1em 0;
+    margin-bottom: 30px;
     border-radius: 5px;
     padding: 10px;
     h1, .headline {
@@ -56,7 +35,7 @@
     p {
       text-align: center;
       line-height: 1.6;
-      padding: 1em 15px;
+      padding: 1em 0;
       font-size: .9em;
     }
     img {
@@ -65,10 +44,10 @@
   }
 }//events-page
 .link-headline:hover{
-  color: $lightred;
+  color: $blue;
 }
 .headline:hover {
-  color: $lightred;
+  color: $blue;
   text-decoration: none;
 }
 .btn-container {
@@ -78,16 +57,16 @@
 }
 .btn-custom {
   text-align: center;
-  padding: 13px 0;
-  width: 130px;
   border-radius: 20px;
   text-transform: uppercase;
   color: #fff;
   border: none;
+  padding: 1em 2.2em;
 }
-.btn-red-submit {
+.btn-blue-submit {
   @extend .btn-custom;
-  background: $lightred;
+  background: $blue;
+  box-shadow: -2px 2px 2px rgba(0,0,0,.3);
 }
 .btn-green-details {
   @extend .btn-custom;
@@ -136,8 +115,7 @@
 }
 
 @media screen and (min-width: 400px) {
-.btn-red-submit{
-  width: 140px;
+.btn-blue-submit{
   line-height: 80%;
 }
 }
@@ -162,9 +140,8 @@
     justify-content: space-between;
     article {
       flex: 0 0 calc(50% - .5em);
-      box-shadow: 0 0 5px 1px rgba(175,176,176,.9);
     }
-    .btn-red-submit{
+    .btn-blue-submit{
       font-size: .9em;
     }
   }

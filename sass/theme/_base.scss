@@ -90,19 +90,33 @@ html{
 body{
 background-image: (linear-gradient($lightgreen,  $offwhite 50%));
 
-  font-family: $font-main;
   color: $font-color;
   background-repeat: no-repeat;
 
 }
 
 h1, h2, h3, h4, h5{
-  font-family: $font-heading;
   line-height: 1.5;
 }
 
 a{
   color: $font-color;
   font-family: $font-main;
+}
+a:focus{
+  outline: none;
+}
+
+
+.fa-tags{
+  -webkit-transform:rotateY(180deg);
+  transform:rotateY(180deg);
+}
+@media screen and (min-width: 768px) {
+    .box-shadow{
+      box-shadow: 0 0 5px 1px hsla(180,1%,69%,.9);
+      border-radius: 5px;
+
+    }
 }
 

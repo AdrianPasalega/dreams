@@ -1,103 +1,38 @@
-#event-post {
-  margin-top: 30px;
-  .type-events {
-    border-radius: 5px;
-    background: #fff;
-    padding: 10px;
-    .entry-title {
-      text-align: center;
-    }
-    .entry-title + p {
-      text-align: center;
-      margin-bottom: 20px;
-      padding-top: .5em;
-    }
-    .wp-post-image {
-      height: auto;
-      width: 100%;
-    }
-
+#event-container{
+  .resources .row{
+    margin-right: -15px;
   }
 }
-.post-details {
-  .btn-container {
-    padding: 2em 0;
+
+.event-post{
+  .post-date{
+    position: relative;
   }
-  dl {
-    font-weight: bold;
-    dt {
-      text-transform: uppercase;
-      border-top: 1px solid $gray;
-      width: 100px;
-      padding: 8px 0;
+  .post-details {
+    .btn-container {
+      padding-top: 2em;
+      .btn-blue-submit{
+        font-size: .9em;
+      }
     }
-    dd {
-      color: $lightred;
+    dl {
+      font-weight: 500;
+      dt {
+        text-transform: uppercase;
+        border-top: 1px solid $gray;
+        width: 100px;
+        padding: 8px 0;
+        font-size: .9em;
+      }
+      dd {
+        color: $blue;
+        font-size: 1.2em;
+      }
     }
   }
 }
 
-.post-content {
-  p {
-    padding: 1em 0;
-    line-height: 1.6;
-    font-size: 1em;
-  }
-  h1 {
-    font-size: 1.5em;
-    padding-top: .4em
-  }
-  h2 {
-    font-size: 1.3em;
-    text-transform: uppercase;
-  }
-  h3 {
-    color: $lightred;
-    padding-top: 1.5em;
-  }
-  time {
-    color: $lightred;
-    margin-right: .5em;
-    font-weight: bold;
-  }
-  h4 {
-    padding-top: .5em;
-  }
-  h5 {
-    padding: 1em 0 1em 0;
-    font-style: italic;
-  }
-  h4 {
-    font-size: 1.4em;
-  }
-  p {
-    text-align: left;
-  }
-  h1,h2,h3,h4,h5,h6 {
-    text-align: left;
-    font-weight: bold;
-  }
-  ul {
-    margin-left: 2em;
-    color: red;
-    li {
-      padding-left: .9em;
-      text-indent: -.7em;
-      color: $darkgreen;
-      line-height: 1.3;
-    }
-    li:before {
-      color: $lightred;
-      content: "\2022";
-      font-size: 1.5em;
-      position: relative;
-      top: .1em;
-    }
-  }
-  strong {
-    font-weight: bold;
-  }
-}
+
 
 .post-event-info {
   display: flex;
@@ -105,6 +40,7 @@
   li{
     padding: .5em .5em .5em 0;
     color: $blue;
+    font-size: .9em;
   }
   i{
     margin-right: 5px;
@@ -113,9 +49,9 @@
 
 
 @media screen and (min-width: 400px) {
-  .post-details{
+  .event-post .post-details{
     dl dt{
-      width: 120px;
+      width: 190px;
     }
   }
 }
@@ -125,19 +61,26 @@
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
-    dl{
-      margin-left: .5em;
-    }
+
     .evt-info{
       margin-left: .3em;
     }
   }
 }
-@media screen and (min-width: 765px) {
-  #event-post{
-    .type-events {
-      box-shadow: 0 0 5px 1px rgba(175, 176, 176, .9);
+
+
+@media screen and (min-width: 769px){
+  .event-post{
+    .resource-content{
+      padding: 15px;
+      padding-top: 0;
     }
+  }
+}
+
+@media screen and (min-width: 902px){
+  .event-post .post-details dl dt{
+    width: 185px;
   }
 }
 
@@ -185,20 +128,49 @@
       }
     }
   }
-  .post-event-info {
-    li{
+
+}
+
+@media screen and (min-width: 992px) {
+  .post-details .post-event-info {
+    padding-left: 0;
+    padding-bottom: .3em;
+  }
+  .event-post {
+    .post-details dl dt {
+      padding-top: .7em;
+    }
+    .col-xs-12 .entry-main {
+      border-right: none;
+    }
+    .post-details .btn-container {
       padding-left: .5em;
     }
-
-
+    .resource-content .entry-header{
+      padding-left: 25px;
+    }
   }
 }
 
-
 @media screen and (min-width: 1200px) {
-  .post-event-info{
-    li{
+  .post-details
+  .post-event-info {
+    li {
       width: 100%;
     }
+  }
+  .event-post {
+    .entry-content {
+      .entry-main {
+        padding-right: 0;
+      }
+    }
+    .resource-content {
+      padding: 55px;
+      padding-top: 0;
+    }
+  }
+  .post-details{
+    padding-left: 50px;
   }
 }

@@ -26,7 +26,7 @@
 <div id="page" class="hfeed site">
     
     <!-- ******************* The Navbar Area ******************* -->
-    <header>
+    <header id="main-header">
     <div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
 
         <nav class="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
@@ -102,6 +102,7 @@
 
     </header>
 
+<div class=" container nav-breadcrumbs">
+    <?php nav_b(); ?>
 
-
-
+</div>

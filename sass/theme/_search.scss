@@ -1,3 +1,17 @@
+#archive-wrapper{
+  .post-date{
+    position: relative;
+  }
+}
+#search-wrapper{
+  #primary.col-md-8{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .post-date{
+    position: relative;
+  }
+}
 .search-result{
   a:hover{
     text-decoration: none;
@@ -27,7 +41,6 @@
   padding: 10px 15px;
   .entry-title{
     font-size: 1.4em;
-    padding:  15px 0;
   }
   .entry-content{
     display: flex;
@@ -46,10 +59,25 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .search-result{
-    article{
-      box-shadow: 0 0 5px 1px hsla(180,1%,69%,.9);
-    }
+.error-404{
+  display: none;
+  .page-header{
+    border-bottom: none;
   }
 }
+
+
+@media screen and (min-width: 768px) {
+
+    #search-wrapper{
+      #secondary{
+        margin-top: 110px;
+      }
+    }
+  #archive-wrapper{
+    #secondary{
+      margin-top: 110px;
+    }
+  }
+  }
+

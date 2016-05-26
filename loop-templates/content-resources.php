@@ -4,11 +4,19 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+<article id="post-<?php the_ID(); ?>" class="
+	<?php
+if (!has_post_thumbnail() ) {
+    echo 'no-img-sg-resource';
+}
+?>
+    <?php echo 'box-shadow resources' ?>
+">
     <div class="res-image-thumbnail">
         <div class="overlay"></div>
         <?php echo the_post_thumbnail('resource-image'); ?>
     </div>
+
 <div class="row">
     <div class="col-xs-12">
 
@@ -20,18 +28,17 @@
 
             </header>
 
-       <div class="entry-content col-md-8 ">
+       <div class="entry-content col-md-9 ">
             <div class="entry-main ">
 
                 <?php the_content(); ?>
-                <div class="post-tags"><i class="fa fa-tags"></i><small>Tags</small><div><?php echo get_the_tag_list('',' ','')?></div></div>
+                <div class="post-tags"><i class="fa fa-tags"></i><small>Tags:</small><?php echo get_the_tag_list('',' ','')?></div>
+
 
 
                 <div class="social-media">
-               <ul>
-                   <li><a href="#" class="fb-share"><i class="fa fa-facebook"></i> </a>Share </li>
-                   <li><a href="#" class="social-heart"><i class="fa fa-heart"></i> </a>24 people love this</li>
-               </ul>
+                    <?php echo do_shortcode("[mashshare]"); ?>
+
                 </div>
            </div>
            <?php
@@ -40,6 +47,7 @@
                comments_template();
            endif;
            ?>
+
             </div>
 
 
@@ -47,30 +55,47 @@
 
            <div class="entry-second col-xs-12 col-md-3">
 
-               <ul class="res-meta-list">
-               <?php if (get_post_meta( get_the_ID(), 'Target', true )) {
-                   $a =  get_post_meta( get_the_ID(), 'Target', true );
-                   echo "<li><i class=\"fa fa-users\"></i><p>Livrat in format:</p><span>$a</span></li>" ;
-               }
-               ?>
-               <?php if (get_post_meta( get_the_ID(), 'Format', true )) {
-                   $a =  get_post_meta( get_the_ID(), 'Format', true );
-                   echo "<li><i class=\"fa fa-file\"></i><p>Livrat in format:</p><span>$a</span></li>" ;
 
-               }
-               ?>
-               <?php if (get_post_meta( get_the_ID(), 'Utility', true )) {
-                   $a =  get_post_meta( get_the_ID(), 'Utility', true );
-                   echo "<li><i class=\"fa fa-book\"></i><p>Util pentru:</p><span>$a</span></li>" ;
-               }
-               ?>
-               <?php if (get_post_meta( get_the_ID(), 'File', true )) {
-                   $a =  get_post_meta( get_the_ID(), 'File', true );
-                   echo "<li><i class=\"fa fa-file-pdf-o\"></i><p>Download:</p><span>$a</span></div></li>" ;
+               <ul class="res-meta" id="resource-list">
 
-               }
-               ?>
-                   </ul>
+                   <?php if (get_post_meta( get_the_ID(), 'objective', true )) {
+                       $a =  get_post_meta( get_the_ID(), 'objective', true );
+                       echo "<li><i class=\"fa fa-bullseye\"></i><div class=meta-c><p>Aims & Objectives</p><span>$a</span></div></li>" ;
+
+                   }
+                   ?>
+
+                   <?php if (get_post_meta( get_the_ID(), 'main_theme', true )) {
+                       $a =  get_post_meta( get_the_ID(), 'main_theme', true );
+                       echo "<li><i class=\"fa fa-pencil-square-o \"></i><div class='meta-c'><p>Main Theme</p><span>$a</span></div></li>" ;
+
+                   }
+                   ?>
+                   <?php if (get_post_meta( get_the_ID(), 'methodology', true )) {
+                       $a =  get_post_meta( get_the_ID(), 'methodology', true );
+                       echo "<li><i class=\"fa fa-book\"></i><div class='meta-c'><p>Methodology</p><span>$a</span></div></li>" ;
+
+                   }
+                   ?>
+                   <?php if (get_post_meta( get_the_ID(), 'nr_participants', true )) {
+                       $a =  get_post_meta( get_the_ID(), 'nr_participants', true );
+                       echo "<li><i class=\"fa fa-users\"></i><div class='meta-c'><p>Nr. of participants</p><span>$a</span></div></li>" ;
+
+                   }
+                   ?>
+                   <?php if (get_post_meta( get_the_ID(), 'duration', true )) {
+                       $a =  get_post_meta( get_the_ID(), 'duration', true );
+                       echo "<li><i class=\"fa fa-clock-o\"></i><div class='meta-c'><p>Duration</p><span>$a</span></div></li>" ;
+
+                   }
+                   ?>
+                   <?php if (get_post_meta( get_the_ID(), 'download_link', true )) {
+                       $a =  get_post_meta( get_the_ID(), 'download_link', true );
+                       echo "<li><i class=\"fa fa-download\"></i><div class='meta-c'><p>Download</p><span>$a</span></div></li>" ;
+
+                   }
+                   ?>
+               </ul>
                </div>
 
            </div>
@@ -80,7 +105,8 @@
     </div>
     <footer class="entry-footer">
 
-        <?php understrap_entry_footer(); ?>
+        <?php
+        understrap_entry_footer(); ?>
 
     </footer><!-- .entry-footer -->
 

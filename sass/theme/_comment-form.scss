@@ -1,0 +1,159 @@
+.says{
+  display: none;
+}
+
+.wpfla.round-avatars{
+  width: 2em;
+  height: 2em;
+  margin-right: 10px;
+}
+.comment-metadata{
+  margin-left: calc(2em + 10px);
+  margin-top: -.5em;
+    time{
+      color: #9b9b9b;
+      font-weight: 300;
+      font-size: .8em;
+
+    }}
+.comment-content{
+  margin-top: 1em;
+}
+#commentform{
+  width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+
+  .comment-form-comment{
+    order: 1;
+  }
+  .form-submit{
+    order: 2;
+    display: flex;
+    font-size: .9em;
+    padding: 10px 0;
+    .btn-blue-submit{
+      margin-left: auto;
+    }
+  }
+  .form-control{
+    border-radius: 0;
+  }
+  .btn-send{
+    background: $blue;
+    border:none;
+    border-radius: 25px;
+    margin-left: auto;
+    color: #fff;
+  }
+  textarea.form-control{
+    height: 10em;
+  }
+}
+
+#comments{
+  padding: 30px;
+  padding-top: 0;
+  #reply-title{
+    margin-bottom: 20px;
+      font-size: .9em;
+    i{
+      margin-right: 10px;
+      color: $blue;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.reply{
+  display: inline-block;
+}
+.comment-reply-body{
+  color:#9b9b9b;
+
+}
+.comment-author{
+  font-weight: bold;
+  display: table;
+  .fn{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.comment-body{
+  padding-bottom: 1.5em;
+}
+
+.container-reply-link{
+  border-bottom: 1px solid #CAD5E0;
+  padding-bottom: 1.5em;
+}
+
+
+.comment-body > div{
+  margin-left: calc(2em + 10px);
+}
+
+.comment-list{
+  ol.children{
+    margin-left: 1.5em;
+  }
+}
+
+.fa-mail-reply{
+  color: #9b9b9b;
+}
+
+.comment-reply-link{
+  color: #9b9b9b;
+  font-weight: 300;
+  font-size: .8em;
+}
+
+.comment-respond{
+  border-bottom: 1px solid #CAD5E0;
+  position: relative;
+  margin-bottom: 3em;
+  padding-bottom: 1.5em;
+}
+.comment-respond::after{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 5em;
+  width: 19px;
+  height: 17px;
+  background: #FFFFFF;
+  border-right:2px solid #CAD5E0;
+  border-bottom:2px solid #CAD5E0;
+  transform: rotate(31deg) skewY(20deg);
+}
+
+@media screen and (min-width: 600px) {
+
+  #commentform {
+    width: 450px;
+  }
+  .comment-list {
+    ol.children {
+      margin-left: 3em;
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  #comments{
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #comments {
+    padding: 30px 80px;
+    padding-top: 0;
+  }
+
+}
+

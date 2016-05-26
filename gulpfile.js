@@ -66,7 +66,7 @@ gulp.task('cleancss', function() {
 gulp.task('scripts', function() {
   gulp.src([
     basePaths.dev + 'js/jquery.min.js', 
-    basePaths.dev + 'js/bootstrap.min.js', 
+    basePaths.dev + 'js/bootstrap.min.js',
     basePaths.dev + 'js/owl.carousel.min.js', 
     basePaths.dev + 'js/skip-link-focus-fix.js'
 

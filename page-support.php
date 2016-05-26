@@ -5,6 +5,7 @@ get_header(); ?>
 
         <div class="support-main">
             <div class="container">
+                <div class="box-shadow">
             <?php if ( have_posts() ) : ?>
 
                 <?php /* Start the Loop */ ?>
@@ -32,7 +33,7 @@ get_header(); ?>
 
 
 
-
+                </div>
         </div>
     </div>
 

@@ -1,15 +1,23 @@
-#main-menu li a{
-  font-weight: bold;
+#main-header{
+  margin-bottom: 40px;
+
 }
 
 .navbar{
   padding-top: 40px;
   background: $darkgreen;
+  .current-menu-item a{
+    color: #fff;
+  }
   li a{
     color: #fff;
+    outline: none;
   &:hover{
     background: transparent;
   }
+    &:focus{
+      background-color: transparent;
+    }
   }
   min-height: 110px;
   .col-lg-12{
@@ -85,7 +93,11 @@
   .navbar {
     background: transparent;
     li a:hover{
+      color: #fff;
+    }
+    li a {
       color: $darkgreen;
+      font-weight: 500;
     }
     .container{
       padding-left: 0;

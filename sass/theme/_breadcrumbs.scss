@@ -1,0 +1,25 @@
+.nav-breadcrumbs{
+  margin-bottom: 10px;
+  span{
+    padding: 0 2px;
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: .9em;
+  }
+  a:hover{
+    text-decoration: none;
+    color: $lightred;
+  }
+
+span[typeof='ListItem']{
+  color: #fff;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .nav-breadcrumbs{
+  span{
+    font-size: .9em;
+  }
+  }
+}

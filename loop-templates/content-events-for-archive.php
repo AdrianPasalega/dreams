@@ -4,13 +4,15 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+<article id="post-<?php the_ID(); ?>" class="
+        <?php echo 'type-events box-shadow' ?>
+" >
     <a href="<?php the_permalink() ?>" class="link-headline"><h2  class="headline"><?php echo the_title() ?></h2></a>
 
 
     <?php
     if(has_excerpt($post->ID)){
-add_filter('the_excerpt', 'limit_words_30'); add_filter('the_excerpt', 'add_dots');   the_excerpt(); }  ?>
+add_filter('the_excerpt', 'limit_words_30');    the_excerpt(); }  ?>
 
         <div class='events-img-details'>
             <div class="btn-container">
@@ -24,10 +26,10 @@ add_filter('the_excerpt', 'limit_words_30'); add_filter('the_excerpt', 'add_dots
                         if (get_post_meta( get_the_ID(), 'subscribe_to_event_link', true )) {
                             $b = get_post_meta(get_the_ID(), 'subscribe_to_event_link', true);
                             ?>
-                                <a href =<?php echo $b ?> ><button class='btn-red-submit' type='button'>Inscrie-te</button></a>
+                                <a href =<?php echo $b ?> ><button class='btn-blue-submit' type='button'>Inscrie-te</button></a>
                         <?php } else { ?>
 
-                            <a href =<?php the_permalink(); ?> ><button class='btn-red-submit' type='button'>Inscrie-te</button></a>
+                            <a href =<?php the_permalink(); ?> ><button class='btn-blue-submit' type='button'>Inscrie-te</button></a>
 
                         <?php } ?>
                     <?php } ?>

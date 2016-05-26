@@ -4,7 +4,7 @@
 get_header(); ?>
 
     <div class="container">
-        <div class="contact-main">
+        <div class="contact-main box-shadow">
 <?php if ( have_posts() ) : ?>
 
     <?php /* Start the Loop */ ?>
@@ -37,6 +37,5 @@ get_header(); ?>
     </div>
     </div>
 
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
 
 <?php get_footer(); ?>

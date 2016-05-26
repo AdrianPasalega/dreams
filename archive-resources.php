@@ -16,10 +16,12 @@
 
 get_header(); ?>
 
-<div class="resources-archive">
-    <div  class="container">
-        <div class="resources-wrapper">
 
+
+        <div id="primary" class=" content-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
 
             <?php if ( have_posts() ) : ?>
 

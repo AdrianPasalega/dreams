@@ -1,6 +1,8 @@
 /**
  * Created by samuelmitra on 3/22/2016.
  */
+
+console.log('a');
 $('.btn-nav-form').click(function(){
     $('.nav-input').toggleClass('toggle-search').focus();
 
@@ -15,12 +17,39 @@ $('.searcher').click(function(){
 
 });
 
-function initialize() {
-    var mapProp = {
-        center:new google.maps.LatLng(51.508742,-0.120850),
-        zoom:7,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-    };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+
+if ($("#resource-list li").length > 5){
+    $("#resource-list").removeClass('res-meta');
+    $("#resource-list").addClass('res-meta-6');
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+var position, direction, previous;
+
+$(window).scroll(function(){
+  if($(this).scrollTop() > 100){ $('.back-to-top').addClass('display');}else{$('.back-to-top').removeClass('display');}
+    if( $(this).scrollTop() >= position ){
+        direction = 'down';
+        if(direction !== previous){
+            $('.back-to-top').addClass('slide-out');
+
+            previous = direction;
+        }
+    } else {
+        direction = 'up';
+        if(direction !== previous){
+            $('.back-to-top').removeClass('slide-out');
+
+            previous = direction;
+        }
+    }
+    position = $(this).scrollTop();
+});
+
+
+
+

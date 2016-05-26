@@ -5,6 +5,7 @@ get_header(); ?>
 
     <div class="about-main">
         <div class="container">
+            <div class = box-shadow>
             <?php if ( have_posts() ) : ?>
 
                 <?php /* Start the Loop */ ?>
@@ -30,8 +31,10 @@ get_header(); ?>
             <?php endif; ?>
 
 
-
-
+            <div id="a-members">
+                <?php get_template_part('members-about'); ?>
+            </div>
+            </div>
 
         </div>
     </div>

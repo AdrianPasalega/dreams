@@ -7,6 +7,7 @@
 
 function understrap_scripts() {
     wp_enqueue_style( 'understrap-theme', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), '0.3.8');
+    wp_enqueue_style( 'understrap-local-fonts', get_stylesheet_directory_uri() . '/fonts/custom-fonts.css');
 
     // Unregister the default jQuery
     wp_deregister_script('jquery');  

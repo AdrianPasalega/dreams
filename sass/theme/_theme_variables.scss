@@ -4,7 +4,6 @@
 // As example you find one of the most important Bootstrap variable below: $brand-primary.
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
-@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,500,700);
 
 $brand-primary:         #0CB4CE; //#ff6d5a
 
@@ -15,15 +14,16 @@ $navbar-border-radius:             0px;
 $lightgreen: rgb(148, 214,213);
 $lightred: rgb(242,98,98);
 $mustard: rgb(197,192,46);
-$blue: rgb(14,124,185);
+$blue: rgb(25,118,211);
 $darkgreen: rgb(12,63,56);
 $offwhite: rgb(239,239,239);
 $lightblue: #14B3FF;
 $gray: rgb(155,155,155);
 $darkred: rgba(242,98,98, .7);
+$gainsboro: #cad5e0;
+$meta-gray: #a8a8a8;
 
-
-$font-main: italic 'Fira Sans';
-$font-heading: 'Fira Sans';
+$font-main: 'Fira Sans','Open Sans', sans-serif;
+$font-heading: 'Fira Sans', 'Open Sans', sans-serif;
 $font-color: $darkgreen;
 $label-color: $mustard;

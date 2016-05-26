@@ -6,6 +6,7 @@
  *
  * @package understrap
  */
+
 ?>
 
 <?php get_template_part('widget-templates/footerfull'); ?>
@@ -14,15 +15,14 @@
 
     <div class="container">
 
-
-
         <footer id="colophon" class="site-footer" role="contentinfo">
             <p class="s"><small>	&copy; 2016 Dreams for Life</small></p>
             <div class="form-inline">
                 <?php echo do_shortcode('[contact-form-7 id="1813" title="newsletter"]'); ?>
             </div>
+            <div class='btn-donate'> <?php echo  do_shortcode("[paypal_donation_button]") ?></div>
             <div class="follow">
-                <p>urmareste-ne pe<a class="icon"><i class="fa fa-facebook"></i></a></p>
+                <p><b>urmareste-ne pe</b><a href="https://www.facebook.com/DreamsforLife" class="icon" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></p>
 
             </div>
 
@@ -32,8 +32,6 @@
     </div><!-- container end -->
 
 </div><!-- wrapper end -->
-
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

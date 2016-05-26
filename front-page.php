@@ -12,21 +12,11 @@
  */
 
 get_header(); ?>
-
-<?php get_template_part('widget-templates/hero'); ?>
-
-<?php get_template_part('widget-templates/statichero'); ?>
-
-<div class="wrapper" id="wrapper-index">
-
-    <div id="content" class="container">
-
+<main>
+    <div class="container">
         <div class="row">
-
-            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
-
-                <main id="main" class="site-main" role="main">
-
+            <div class="col-lg-12 col-xs-12">
+                <div class="hero">
                     <?php if ( have_posts() ) : ?>
 
                         <?php /* Start the Loop */ ?>
@@ -38,29 +28,34 @@ get_header(); ?>
                              * If you want to override this in a child theme, then include a file
                              * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                              */
-                            get_template_part( 'loop-templates/content', get_post_format() );
+                            get_template_part( 'loop-templates/content', 'index-hero' );
                             ?>
 
                         <?php endwhile; ?>
-
-                        <?php understrap_paging_nav(); ?>
-
-                    <?php else : ?>
-
-                        <?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
                     <?php endif; ?>
+                </div>
+                <div class="content main-evt box-shadow">
 
-                </main><!-- #main -->
+                    <?php get_template_part('event-for-index'); ?>
+                </div>
 
-            </div><!-- #primary -->
+                <div class="content articles box-shadow">
+                    <p class="index-tag">For Blog</p>
 
-            <?php get_sidebar(); ?>
+                    <?php get_template_part('post-for-index'); ?>
+                </div>
 
-        </div><!-- .row -->
+                <div class="content box-shadow">
+                    <p class="index-tag">Testimonials</p>
+                    <div class="testimonials">
 
-    </div><!-- Container end -->
+                        <?php get_template_part('testimonials-for-index'); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</div><!-- Wrapper end -->
+</main>
+
 
 <?php get_footer(); ?>

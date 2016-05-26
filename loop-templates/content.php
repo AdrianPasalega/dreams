@@ -5,7 +5,9 @@
 
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="
+	<?php echo 'box-shadow' ?>
+">
 	<?php echo get_the_post_thumbnail( $post->ID, 'post-image' ); ?>
 <div class="blog-article-content clearfix">
 	<header class="entry-header">

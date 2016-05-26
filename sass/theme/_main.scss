@@ -1,3 +1,4 @@
+
 .home{
   main{
     margin-top: 40px;
@@ -27,21 +28,23 @@ main {
         color: $darkgreen;
         &:hover{
           text-decoration: none;
-          color: $lightred;
+          color: $blue;
         }
       }
     }
   }
 
   .articles {
+
     article {
       margin: 10px 0;
+
       h2 {
         font-size: 1.4em;
         padding-top: .5em
       }
       a {
-        color: $lightred;
+        color: $blue;
         font-weight: bold;
         display: block;
         padding-top: 1em;
@@ -53,7 +56,6 @@ main {
 .index-tag {
   box-shadow: 1px 1px 2px gray;
   border-radius: 5px;
-  font-family: $font-heading;
   background: $mustard;
   text-transform: uppercase;
   color: #fff;
@@ -143,9 +145,6 @@ main {
 
 @media  screen and (min-width: 767px) {
   main {
-  .content{
-    box-shadow: 0 0 5px 1px rgba(175,176,176,.9);
-  }
     .main-evt {
       text-align: center;
       article {
@@ -206,6 +205,9 @@ main {
     }
   }
 }
+
+
+
 
 @media screen and (max-width: 902px){
   .testimonials{

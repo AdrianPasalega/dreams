@@ -1,3 +1,4 @@
+
 <?php if ( comments_open() ) : ?>
 
     <!-- Kommentar eingeben -->
@@ -32,8 +33,8 @@
                     <input class="form-control" type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
                 </div>
 
-                <?php do_action('comment_form', $post->ID); ?>
 
             </form>
+    <?php do_action('comment_form', $post->ID); ?>
 
 <?php endif ?>

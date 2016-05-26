@@ -8,7 +8,7 @@ function bootstrap3_comment_form( $args ) {
     $args['comment_field'] = '<div class="form-group comment-form-comment">
     <textarea class="form-control" id="comment" name="comment" placeholder="Comment" cols="45" rows="8" aria-required="true"></textarea>
     </div>';
-    $args['class_submit'] = 'btn-send'; // since WP 4.1
+    $args['class_submit'] = 'btn-blue-submit'; // since WP 4.1
     return $args;
 }
     add_filter( 'comment_form_default_fields', 'bootstrap3_comment_form_fields' );
