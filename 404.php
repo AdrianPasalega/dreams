@@ -19,14 +19,14 @@ get_header(); ?>
 
                         <header class="page-header">
 
-                            <h1 class="page-title"><?php _e( 'Oops! Looks like the internet fell trough.', 'understrap' ); ?></h1>
+                            <h1 class="page-title"><?php _e( 'Uh-oh. 404:(', 'understrap' ); ?></h1>
                         </header><!-- .page-header -->
 
                         <div class="page-content">
 
-                            <p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ); ?></p>
+                            <p><?php _e( 'Looks like the internet fell through. Go back to', 'understrap' ); ?> <a href="http://dreams.flyingdisc.ro/About/">Despre noi</a></p>
 
-
+                             <div class="background-404"></div>
 
                         </div><!-- .page-content -->
 

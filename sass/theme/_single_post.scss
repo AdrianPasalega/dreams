@@ -1,396 +1,209 @@
-#primary.col-md-8 {
-  padding: 0;
-}
-
-
-
-.post-date{
-  position: absolute;
-}
-
-.page-for-post {
-  background: #fff;
-}
-
-.post-article {
-  background-color: #fff;
-
-  .post-tags a{
-    font-size: .7em;
+.wrapper-for-post{
+  .container{
+    padding: 0;
+    background: #fff;
   }
-  .post-content {
-    padding: 0 1.5em;
-  }
-
-
-  .entry-header {
+}
+.post-article{
+  .sg-post-image{
     position: relative;
-    margin-bottom: 1em;
+  }
+  .wp-post-image{
+    height: auto;
+  }
+  .entry-header{
+    position: absolute;
+    bottom: 1em;
+    color: #fff;
+    padding-left: 1.5em;
   }
   .entry-title{
-    font-size: 1.3em;
-    font-weight: bold;
-    text-shadow: 2px  2px rgba(0,0,0,.5);
-    position: absolute;
-    bottom: 33%;
-    padding: 0 15px;
-    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    font-weight: 500;
+    line-height: 1.2;
   }
   .post-date{
-    position: absolute;
-    bottom: 15%;
-    color: #fff;
-    padding: 0 15px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .post-tags{
+
+    padding-top: 0;
 
   }
-  .entry-meta{
-    p{
-      padding-top: 0;
+  .post-content{
+    padding: 1.5em;
+  }
+}
+
+
+
+
+.no-img-blog {
+  padding-top: 20px;
+  .sg-post-image .entry-header{
+    padding-left: 0;
+    position: relative;
+    padding-bottom: 1em;
+    &.col-md-8{
+      width: 100%;
     }
-    small{
+    .entry-title {
+      color: $darkgreen;
+      text-shadow: none;
+    }
+    .post-date{
+      margin-top: 0;
+      color: $darkgreen;
+      text-shadow: none;
+    }
+    .entry-date{
+      color: $lightblue;
+    }
+
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper-for-post{
+      .row{
+        margin-right: 0;
+      }
+      #primary.col-md-9{
+        padding-right: 0;
+      }
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper-for-post{
+    .container{
+      padding-left: 15px;
+      padding-right: 15px;
+      background: none;
+    }
+    main {
+      background: #fff;
+      padding-bottom: 60px;
+    }
+      #comments{
+        padding-left: 60px;
+      }
+
+    }
+  .post-article{
+    .wp-post-image{
+      border-radius: 5px 5px 0 0;
+    }
+    .post-content{
+        padding: 60px;
+      padding-top: 50px;
+
+    }
+    .post-tags{
+        padding-bottom: 1em;
+        padding-left: 0;
+    }
+    .entry-header{
+      padding-left: 60px;
+    }
+  }
+}
+
+
+
+#secondary aside:first-of-type{
+  margin-top: 0
+}
+
+
+@media screen and(max-width: 992px){
+  .wrapper-for-post{
+    #secondary{
       display: none;
     }
   }
+}
+@media screen and (min-width: 992px) {
+  #secondary{
+    aside{
+      padding: 20px;
+      background: #fff;
+      margin: 20px 0;
+      border-radius: 5px;
+      box-shadow:  0 0 5px 1px hsla(180,1%,69%,.9);
+      h3{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.125em;
+      }
+      ul{
+        li{
+          text-indent: .5em;
+          padding: .5em 0;
+          font-size: 1em;
+          &::before {
+            content: "\2022";
+            font-size: 1.5em;
+            position: relative;
+            top: .1em;
+          }
+          a{
+            margin-left: 5px;
+            font-size: .9em;
+          }
+        }
+      }
 
-  .post-author{
-    color: $meta-gray;
-    margin-top: 1em;
-    font-size: 1em;
-    padding-bottom: .5em;
-  }
-
-  .entry-date{
-    font-size: .8em;
-    color: #fff;
-  }
-   .fa-calendar{
-     color: #fff;
     }
   }
 
-.page-for-post{
-  .entry-content{
-    padding-bottom: 3em;
-  }
-}
-
-.entry-content {
-  p {
-    font-size: 1em;
-    line-height: 1.6;
-    padding: 10px 0;
-  }
-}
-#secondary.col-md-4{
-        padding: 0;
-}
-#secondary{
-  aside{
-    padding: 20px;
-    background: #fff;
-    margin: 20px 0;
-    h3{
+  .blog-widget{
+    .textwidget{
       font-weight: bold;
       text-transform: uppercase;
-      font-size: 1.4em;
-    }
-    ul{
-      li{
-        text-indent: .5em;
-        padding: .5em 0;
-        &::before {
-          content: "\2022";
-          font-size: 1.5em;
-          position: relative;
-          top: .1em;
-        }
-        a{
-          margin-left: 5px;
-        }
-      }
-    }
-  }
-}
-
-.blog-widget{
-.textwidget{
-  font-weight: bold;
-  text-transform: uppercase;
-  a{
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: #3b5997;
-    text-align: center;
-    margin-left: 5px;
-    line-height: 2;
-    i{
-      font-size: 1.3em;
-      line-height: 35px;
-      color: #fff;
-    }
-  }
-}
-}
-
-
-
-.social-media{
-  ul{
-    padding: 10px;
-    padding-left: 0;
-    li{
-      padding: 10px 0;
       a{
-        margin-right: 5px;
-      }
-      .fa-heart{
-        color: $lightred;
-        font-size: 1.5em;
-      }
-      .social-heart{
-        margin-left: 3px;
-      }
-      .fb-share{
-        background: $lightred;
-        text-align: center;
         display: inline-block;
-        width: 1.5em;
-        height: 1.5em;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
-
-      }
-      .fa-facebook{
-        color: #fff;
-        line-height: 1.7em;
-        font-size: 1em;
-
-      }
-    }
-  }
-}
-
-
-
-
-
-
-
-//.page-for-post
-
-  .no-img-blog {
-    padding-top: 20px;
- .entry-header{
-  .entry-title {
-    position: relative;
-    color: $darkgreen;
-    text-shadow: none;
-  }
-   .post-date{
-     position: relative;
-     margin-top: 0;
-   }
-   .entry-date{
-     color: $lightblue;
-   }
-   .fa-calendar{
-     color: $lightblue;
-    }
-
- }
-
-  }
-.single-post-thumbnail {
-    position: relative;
-    img {
-      width: 100%;
-      height: auto;
-    }
-}
-
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 2px;
-  left: 0;
-  right: 0;
-  opacity: .9;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .0) , #000);
-}
-
-
-@media screen and (min-width: 400px){
-  .post-article{
-    .entry-title{
-      bottom: 25%;
-    }
-    .post-date{
-      bottom: 10%;
-    }
-  }
-  .fa-calendar{
-    font-size: .8em;}
-}
-
-@media screen and (min-width: 600px){
-  .post-article .entry-title{
-    bottom: 17%;
-  }
-  .post-article .post-date{
-    bottom: 7%;
-  }
-}
-
-
-
-  @media screen and (min-width: 768px) {
-    #single-wrapper {
-      .row {
-        margin: 0;
-      }
-    }
-    .post-article {
-      .post-tags {
-        padding: 0;
-        small {
-          display: inline-block;
-          color: $meta-gray;
-          font-size: .8em;
-          font-weight: 400;
-        }
-        i {
-          display: none;
+        background: #3b5997;
+        text-align: center;
+        margin-left: 5px;
+        line-height: 2;
+        i{
+          font-size: 1.3em;
+          line-height: 35px;
+          color: #fff;
         }
       }
-      .post-content {
-        padding: 0 40px;
-      }
-      .entry-title {
-        font-size: 1.5em;
-        padding: 0 40px;
-        bottom: 14%;
-      }
-      .post-date{
-        padding: 0 40px;
-      }
-
-    }
-
-    .single-post-thumbnail {
-      border-radius: 5px;
-      img {
-        border-radius: 5px;
-      }
-    }
-
-    #secondary {
-      aside {
-        box-shadow: 0 0 5px 1px hsla(180, 1%, 69%, .9);
-        border-radius: 5px;
-      }
-    }
-    .no-img-blog {
-      .entry-header
-      .post-date {
-        margin-top: auto;
-      }
     }
   }
 
-
-@media screen and (min-width: 902px) {
-  .post-article{
-    .entry-title{
-    }
-  }
 }
 
-@media screen and (min-width: 992px) {
-  .post-article {
-    .entry-title{
-      padding: 0 50px;
-    }
-    .post-date{
-      padding: 0 50px;
-    }
-      .post-date {
-        font-size: 1em;
-        .fa-calendar {
-        }
-      }
-  }
-  .single-post-thumbnail {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  .wrapper-for-post {
-    padding-bottom: 30px;
-    #primary.col-md-8 {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
-  #secondary.col-md-4 {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  #secondary {
-    aside {
-      margin-top: 0;
-      li {
-        font-size: .8em;
-        line-height: 1.5;
-      }
-      h3 {
-        font-size: 1em;
-      }
-    }
-  }
-  .blog-widget {
-    .textwidget a {
-      width: 30px;
-      height: 30px;
-      i {
-        font-size: 1em;
-        line-height: 10px;
-      }
-    }
-  }
-}
 @media screen and (min-width: 1200px) {
-  .post-article {
-.post-content{
-  padding: 0 80px;
-}
-      .entry-title {
-        font-size: 1.7em;
-        line-height: 1.2;
+    .post-article {
+      .post-content {
+        padding: 80px;
+        padding-top: 60px;
+
       }
-
-
-    .post-author {
-      font-size: .8em;
-    }
-  .entry-title, .post-date{
-    padding: 0 100px;
-  }
-
-  }
-  .social-media {
-    ul {
-      li {
-        margin-right: 15px;
-        display: inline-block;
+      .entry-header {
+        padding-left: 80px;
+      }
+      .post-tags {
+        small {
+          font-size: .8em;
+        }
       }
     }
-  }
-  .no-img-blog {
-    .entry-header {
-      .post-date {
-        margin-top: auto;
-      }
+  .wrapper-for-post{
+    #comments{
+      padding-left: 80px;
     }
   }
 }

@@ -14,9 +14,9 @@ get_header(); ?>
         <div id="weglot_here"></div>
         <div class="row">
 
-            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> col-lg-9 content-area page-for-post box-shadow">
+            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-9<?php else : ?>col-md-12<?php endif; ?> col-lg-9 content-area page-for-post">
 
-                <main id="main" class="site-main" role="main">
+                <main id="main" class="site-main  box-shadow" role="main">
 
                     <?php while ( have_posts() ) : the_post(); ?>
 

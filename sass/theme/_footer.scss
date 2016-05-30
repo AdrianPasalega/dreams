@@ -44,12 +44,15 @@ div.wpcf7-validation-errors{
     color: rgb(95,114,112);
     order: 3;
     font-size: .8em;
-    padding-top: 2em;
     margin: 0 auto;
   }
   .btn-donate{
     margin: 0 auto;
-    padding: 1em 0;
+    padding-bottom: 1em;
+    input{
+      width: 65%;
+      max-width: 300px;
+    }
   }
   .wpcf7-form{
     position: relative;
@@ -57,7 +60,6 @@ div.wpcf7-validation-errors{
   div.wpcf7-response-output{
     margin: 0;
     margin-top: 10px;
-    padding: 0;
     border:none;
     order:2;
     padding: 0 .5em;
@@ -103,14 +105,12 @@ p{
   margin-top: 1em;
   order: 1;
   flex: 1 0 80%;
-  b{
-    padding-left: 20px;
-  }
+  margin-bottom: 2.5em;
   p {
     text-transform: uppercase;
     font-family: $font-heading;
     color: $gray;
-    font-size: 1em;
+    font-size: 1.2em;
   }
   a {
     margin-left: 10px;
@@ -123,7 +123,7 @@ p{
 }
 
 
-
+/*
 @media screen and (min-width: 360px) {
   .site-footer {
     .btn-donate {
@@ -143,9 +143,9 @@ p{
     margin-top: 1.3em;
   }
 
-}
+}*/
 
-@media screen and (min-width: 400px){
+/*@media screen and (min-width: 400px){
   .site-footer form span{
     flex: 1;
     width: 250px;
@@ -168,21 +168,49 @@ p{
         margin-top: 0 !important;
       }
     }
-    span.wpcf7-not-valid-tip{
+
       text-align: left;
       padding-left:  1em !important;
     }
   }
   .follow{
-    font-size: 15px;
     margin-top: .7em;
     b{
       padding: 0;
     }
   }
 
+}*/
+
+@media screen and (min-width: 400px) {
+    .site-footer{
+      width: 370px;
+      margin: 0 auto;
+      form input[type="submit"] {
+        font-size: .8em;}
+      form span{
+        margin: 0 auto;
+      }
+      .btn-donate{
+        padding-top: 1em;
+      }
+      div.wpcf7-response-output{
+        text-align: center;
+        padding-left: 2em;
+      }
+    }
+  .follow{
+    font-size: 15px;
+
+  }
+  .follow{
+    p{
+      font-size: 15px;
+    }
+  }
 }
 
+/*
 @media screen and (min-width: 550px){
   .site-footer{
     width: 515px;
@@ -200,12 +228,13 @@ p{
     }
   }
 }
+*/
 
 @media screen and (min-width: 545px){
       .site-footer{
         .btn-donate{
           display: table;
-          padding-top: .5em;
+          padding-top: 1.5em;
           }
           }
   #wrapper-footer #donation_buttons{
@@ -213,7 +242,62 @@ p{
   }
 }
 
-@media screen and (min-width: 750px){
+@media screen and (min-width: 700px){
+  .site-footer{
+    margin: 0;
+    width: auto;
+    .wpcf7 {
+      width: 315px;
+    }
+      span {
+        flex: 1;
+        max-width: 250px;
+      }
+
+    form .form-control {
+      text-align: left;
+    }
+      form input[type="submit"] {
+        font-size: 15px;
+        padding-right: 1.5em;
+        align-self: flex-start;
+        padding-top: 1.2em;
+      }
+
+    form .form-control{
+      max-width: 315px;
+    }
+    .btn-donate{
+    margin: 0;
+      padding-top: 0;
+      order: 2;
+      margin-left:auto;
+      input{
+        width: 145px;
+        margin-top: 8px;
+      }
+    }
+    div.wpcf7-response-output{
+      text-align: left;
+      padding-left: 0;
+    }
+
+  }
+  .follow{
+    font-size: 15px;
+    margin-top: .5em;
+    flex: none;
+    margin-left:auto;
+    margin-right: auto;
+    b{
+      padding: 0;
+    }
+  }
+
+}
+
+
+/*@media screen and (min-width: 750px){
   .site-footer{
     width: auto;
     margin: 0;
@@ -227,7 +311,8 @@ p{
     text-align: center;
     margin-top: .4em;
   }
-}
+}*/
+
 
 @media screen and (min-width: 768px) {
     .site-footer{
@@ -235,21 +320,14 @@ p{
         width: 100%;
       }
     }
-  .follow{
-    margin-top: .5em;
-    flex: none;
-    margin-left: auto;
-  }
+
 }
+
 
 
 @media screen and (min-width: 902px) {
   .site-footer {
-    form {
-      input[type="submit"] {
-        font-size: 17px;
-      }
-    }
+
     div.wpcf7-response-output{
       text-align: left;
     }
@@ -269,16 +347,20 @@ p{
     .btn-donate{
       order: 3;
       align-self: baseline;
-      padding-top: 1em;
+      input{
+        margin-top: 6px !important;
+      }
     }
   }
   .site-footer {
     align-items: center;
     padding: 2em 0;
+    .wpcf7{
+      width: 340px;
+    }
     form{
       input[type="submit"]{
         font-size: 15px;
-        padding-top: 1.2em;
       }
     }
     .s {
@@ -286,12 +368,15 @@ p{
       flex: 1 0 auto;
       text-align: left;
       align-self: flex-start;
-      padding-top: 2em;
+      padding-top: 1.5em;
     }
 
     .form-inline {
       order: 0;
-      padding-top: .5em;
+      align-self: flex-start;
+      .form-control{
+        text-align: center;
+      }
     }
   }
     .site-footer .follow {
@@ -300,7 +385,6 @@ p{
       margin-bottom: 0;
       flex: 1 1 220px;
       align-self: flex-start;
-      margin-top: 1em;
       p{
         font-size: 15px;
       }

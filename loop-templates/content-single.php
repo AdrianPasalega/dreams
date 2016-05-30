@@ -11,24 +11,21 @@
 			 	}
 		 	?>
 		 ">
-	<div class="single-post-thumbnail">
+	<div class="sg-post-image">
 		<div class="overlay"></div>
+		<?php echo the_post_thumbnail('resource-image'); ?>
+		<header class="entry-header col-md-8 ">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<p class = 'post-date'>Posted on <?php echo the_date('Y.m.d') ?> by <?php echo get_the_author(); ?> </p>
 
-		<?php echo get_the_post_thumbnail( $post->ID, 'post-image' ); ?>
-		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-
-		<p class = 'post-date'><i class="fa fa-calendar"></i> <?php understrap_posted_on(); ?></p>
-
-
+		</header>
 	</div>
+
+
+
 		<div class="post-content">
-			<header class="entry-header">
-				<div class="entry-meta">
-					<p class="post-author"> by <?php echo get_the_author(); ?> </p>
-					<p class="post-tags"><small>Tags</small><i class="fa fa-tag"></i> <?php echo get_the_tag_list('',' ','')?></p>
-				</div><!-- .entry-meta -->
-			</header><!-- .entry-header -->
 			<div class="entry-content">
+				<p class="post-tags"><i class="fa fa-tags"></i> <small>Tags:</small> <?php echo get_the_tag_list('',' ','')?></p>
 				<?php the_content(); ?>
 			</div><!-- .entry-content -->
 			</div>
@@ -37,3 +34,4 @@
 		<?php echo do_shortcode("[mashshare]"); ?>
 	</div>
 </article><!-- #post-## -->
+

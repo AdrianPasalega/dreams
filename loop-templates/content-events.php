@@ -10,23 +10,25 @@ if (!has_post_thumbnail() ) {
     echo 'no-img-sg-resource';
 }
 ?>
-    <?php echo 'box-shadow resources' ?>
+    <?php echo 'box-shadow event' ?>
 ">
-    <div class="res-image-thumbnail">
+    <div class="evt-image-thumbnail">
         <div class="overlay"></div>
         <?php echo the_post_thumbnail('resource-image'); ?>
+        <header class="entry-header col-md-8 ">
+            <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+            <p class = 'post-date'>Posted on <?php echo the_date('Y.m.d') ?> by <?php echo get_the_author(); ?> </p>
+
+        </header>
+
     </div>
 
     <div class="row">
         <div class="col-xs-12">
 
-            <div class="resource-content">
+            <div class="event-content">
 
-                <header class="entry-header col-md-8 ">
-                    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-                    <p class = 'post-date'>Posted on <?php echo the_date('Y.m.d') ?> by <?php echo get_the_author(); ?> </p>
 
-                </header>
 
                 <div class="entry-content col-md-9 ">
                     <div class="entry-main ">
@@ -143,3 +145,4 @@ if (!has_post_thumbnail() ) {
         <button type="button" class="btn-red-submit">inscrie-te</button>
     </div>
 </div>-->
+

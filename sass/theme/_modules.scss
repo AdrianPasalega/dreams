@@ -11,6 +11,16 @@
 }
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  opacity: .9;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .0) , #000);
+}
+
 
 
 .mashsb-box .mashsb-buttons a{
@@ -43,8 +53,8 @@
   padding: 10px 0;
   a{
     border-radius: 15px;
-    font-size: .9em;
-    padding: .3em .5em;
+    font-size: .8em;
+    padding: 0 .7em;
     margin: .2em;
     border: 1px solid #d7d7d7;
     display: inline-block;
@@ -115,7 +125,7 @@ i{
     padding: 4em 0 1em 2em;
   }
   .social-media-p{
-    padding-left: 2.5em;
+    padding-left: 4em;
   }
   .no-img-blog{
     .social-media-p{
@@ -125,11 +135,8 @@ i{
 }
 
 @media screen and (min-width: 901px){
-  .post-tags{
-    a{
-      font-size: .8em;
-    }
-  }
+
+
   .social-media{
     padding-left: 1.6em;
   }
@@ -156,7 +163,7 @@ i{
     padding-left: 4em;
   }
   .social-media-p{
-    padding-left: 4.6em;
+    padding-left: 5em;
   }
 }
 

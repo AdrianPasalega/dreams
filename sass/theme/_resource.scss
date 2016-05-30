@@ -33,7 +33,10 @@
   justify-content: space-around;
   .entry-header {
     position: absolute;
-    bottom: 102%;
+    bottom: 101%;
+    .post-date{
+      position: relative;
+    }
   }
   .entry-title {
     font-size: 1.2em;
@@ -47,12 +50,11 @@
   .post-date {
     font-size: 1em;
     color: #fff;
+    font-weight: 500;
   }
 
   .entry-main {
     p {
-      line-height: 1.6;
-      font-size: 1em;
         padding-bottom: 25px;
 
     }
@@ -110,6 +112,12 @@ span{
   }
 }
 
+.entry-content{
+  li{
+    line-height: 1.6;
+  }
+}
+
 @media screen and (min-width: 375px) {
 
     .res-meta-list{
@@ -129,12 +137,7 @@ span{
 
 @media screen and (min-width: 400px) {
     .resource-content{
-      .entry-header{
-        .post-date{
-          font-size: .8em;
-        }
 
-      }
       .entry-title{
         font-size: 1.2em;
       }
@@ -188,8 +191,6 @@ span{
   .resource-content{
     .entry-header{
       .post-date{
-        font-size: .9em;
-        font-weight: bold;
       }
     }
     .entry-tittle{
@@ -249,7 +250,6 @@ span{
 }
   .resource-content {
     .entry-header{
-      bottom: 103%;
     }
     justify-content: flex-start;
 margin-top: 50px;
@@ -270,7 +270,6 @@ margin-top: 50px;
 .entry-header{
 padding-left: 20px;
   .post-date{
-    font-size: .8em;
     line-height: 1.5;
   }
 

@@ -32,7 +32,7 @@ if (!has_post_thumbnail() ) {
             <div class="entry-main ">
 
                 <?php the_content(); ?>
-                <div class="post-tags"><i class="fa fa-tags"></i><small>Tags:</small><?php echo get_the_tag_list('',' ','')?></div>
+                <p class="post-tags"><i class="fa fa-tags"></i><small>Tags:</small><?php echo get_the_tag_list('',' ','')?></p>
 
 
 

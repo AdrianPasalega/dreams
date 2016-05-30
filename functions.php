@@ -343,7 +343,7 @@ add_filter( 'pre_get_posts', 'add_custom_types_category' );
 
 function nav_b(){
        $classes = get_body_class();
-       $a = ['home', 'search', 'category', 'tag'];
+       $a = ['home', 'search', 'category', 'tag', 'error404'];
        $result = array_intersect($classes, $a);
        if(empty($result)){
 

@@ -6,8 +6,8 @@
  */
 
 get_header(); ?>
-<div  id="resource-post">
-    <div id ="event-container" class="container event-post">
+<div  id="event-post">
+    <div id ="event-container" class="container single-event">
 
         <?php while ( have_posts() ) : the_post(); ?>
 

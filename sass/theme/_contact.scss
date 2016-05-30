@@ -47,7 +47,7 @@
 }
 #contact-text{
   ul{
-    padding-top: 1em;
+    padding-top: 3em;
     li{
       padding: .5em 0;
       list-style: none;
@@ -60,7 +60,11 @@
   }
 }
 
-@media screen and (min-width: 800px){
+
+@media screen and (min-width: 768px){
+  .contact-main{
+    padding: 2.5em;
+  }
 #contact-m-container{
   display: flex;
   align-items: flex-end;
@@ -79,6 +83,12 @@
 
 @media screen and (min-width: 1200px) {
 
+  #contact-text ul{
+    padding-top: 2em;
+  }
+  .contact-main{
+    padding: 3.5em;
+  }
 
   .contact-info {
     margin: 30px 0;
@@ -102,7 +112,6 @@
   }
 }
   .contact-main{
-    padding: 2em;
     .wpcf7{
       float: left;
     }

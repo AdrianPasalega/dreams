@@ -58,11 +58,24 @@
     padding-bottom: .5em;
   }
 }
+.error404{
+  #main-header{
+    margin-bottom: 0;
+  }
 
+
+}
 .error-404{
-  display: none;
+  text-align: center;
   .page-header{
     border-bottom: none;
+    font-weight: bold;
+  }
+  .page-content{
+    font-weight: bold;
+  }
+  a{
+    color: $blue;
   }
 }
 
@@ -79,5 +92,16 @@
       margin-top: 110px;
     }
   }
+  .error-404{
+    margin-top: 3em;
+  }
+.background-404{
+        width: 400px;
+  height: 400px;
+  margin: 7em auto 4em auto;
+  padding-top: 40px;
+  background-image: url('../images/404-background.png');
+  background-repeat: no-repeat;
+}
   }
 
