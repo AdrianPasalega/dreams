@@ -14,9 +14,9 @@
     <?php echo 'box-shadow' ?>
 ">
     <?php echo get_the_post_thumbnail( $post->ID, 'post-image' ); ?>
-    <div class="search-article-content clearfix">
+    <div class="search-article-content clearfix ">
         <header class="entry-header">
-            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+            <?php add_filter('the_title', 'highlight_search_term'); the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 
                 <div class="entry-meta">
@@ -27,11 +27,11 @@
         </header><!-- .entry-header -->
 
 
-        <div class="entry-content">
+        <div class=" entry-content">
             <?php if(has_excerpt($post->ID)) {
-                the_excerpt();
+                add_filter('the_excerpt', 'highlight_search_term'); the_excerpt();
             }
-            ?></p>
+            ?>
             <a href ='<?php echo the_permalink()  ?>' class="read-more">Read more</a>
 
 

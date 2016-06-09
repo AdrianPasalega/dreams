@@ -13,9 +13,7 @@
     font-weight: 500;
   }
   p{
-    font-size: .9em;
     padding: 10px 0;
-    line-height: 1.6;
   }
   a {
     color: $lightblue;
@@ -23,7 +21,7 @@
 }
 
 .about{
-  padding: 0 25px 30px;
+  padding: 0 25px;
   background: #fff;
 
 
@@ -43,7 +41,7 @@
   width: 100%;
 }
 .about-headline, .ab-team-headline{
-  font-size: 1.4em;
+  font-size: 1.7em;
   text-transform: uppercase;
 }
 
@@ -181,28 +179,18 @@
           border-radius: 5px 5px 0 0;
         }
       }
-  .about-headline{
-    font-size: 1.7em;
-    &+p{
-      font-size: 1em;
-    }
-  }
-  .ab-team-headline{
-    &+p{
-      font-size: 1em;
-    }
-  }
 }
 
 @media screen and (min-width: 781px){
-  .ab-col-title{
-    font-size: 1em;
+  .about-intro{
+    padding-top: 45px;
+    padding-bottom: 5px;
   }
   .about{
     padding: 0 15px 30px;
   }
   #a-values{
-        padding: 35px 25px;
+        padding: 45px 25px;
         background: #f6f6f6;
         border-top: 1px solid #d3d3d3;
         border-bottom: 1px solid #d3d3d3;
@@ -213,11 +201,7 @@
   }
 }
 
-@media screen and (min-width: 901px) {
-      .ab-col-title{
-        font-size: .8em;
-      }
-}
+
 
 @media screen and (min-width: 1200px) {
       .about-thumbnail{
@@ -225,32 +209,32 @@
           width: 100%;
         }
       }
-  .about-headline, .ab-team-headline{
-    font-size: 2em;
+  .about-col{
+    p{
+      padding: 1em .5em;
+    }
   }
+
   .about-intro, .team-intro{
     width: 60%;
   }
 
   .ab-col-title{
-    font-size: 1em;
     font-weight: 400;
     padding-bottom: 10px;
   }
 
   #a-values{
-    padding: 35px 90px;
+    padding: 45px 30px 30px;
     .first-col{
       padding-left: 10px;
     }
   }
-  .about-col p{
-    font-size: .8em;
-  }
+
 
   #a-members{
     justify-content: center;
-    padding: 25px 115px;
+    padding: 25px 55px;
     .panel-grid-cell{
       width: 33% !important;
     }
@@ -260,3 +244,4 @@
   }
 
 }
+

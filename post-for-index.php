@@ -23,7 +23,7 @@ while ( $t->have_posts() ) : $t->the_post();;
             <div class="blog-content">
         <h2><?php echo get_the_title()  ?></h2>
       <?php add_filter('the_excerpt', 'limit_words_20'); add_filter('the_excerpt', 'add_dots'); the_excerpt(); ?>
-                <a href="<?php the_permalink() ?>">More</a>
+                <a href="<?php the_permalink() ?>">Citeste mai mult</a>
 
 
             </div>

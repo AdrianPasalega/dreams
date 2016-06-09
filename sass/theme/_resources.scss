@@ -32,11 +32,18 @@
 
   .read-more{
     display: block;
-  padding: 1em 0;
+  padding-top: 1em;
     color: $blue;
     text-transform: uppercase;
   }
 }
+
+.resource-archive.post-article{
+  .post-content{
+    padding-bottom: 0;
+  }
+}
+
 .resources-title{
   color: #fff;
   position: absolute;
@@ -180,6 +187,15 @@
     }
   }
 
+}
+
+@media screen and (min-width:992px){
+  .res-meta li p, .res-meta-6 li p{
+    font-size: 1.125rem;
+  }
+  .res-meta span, .res-meta-6 span{
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (min-width: 1200px) {

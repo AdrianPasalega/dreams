@@ -34,9 +34,7 @@
     }
     p {
       text-align: center;
-      line-height: 1.6;
       padding: 1em 0;
-      font-size: .9em;
     }
     img {
       width: 100%;
@@ -159,7 +157,7 @@
   .events-info {
 li{
 
-  font-size: 1em;
+  font-size: 1.2em;
 
 }  }
 }
@@ -179,6 +177,7 @@ li{
       justify-content: space-between;
       li {
         display: flex;
+        line-height: 1.2;
       }
     }
   }

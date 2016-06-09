@@ -21,7 +21,7 @@ get_header(); ?>
 
 <div class=" blog-page" id="wrapper-index">
 <div class="back-to-top">
-    <a href="#main-header"><i class="fa fa-arrow-circle-up"></i> </a>
+    <a href="javascript:"><i class="fa fa-arrow-circle-up"></i> </a>
 </div>
     <div id="content" class="container">
 
@@ -34,7 +34,7 @@ get_header(); ?>
                     $loop = new WP_Query( $args ); ?>
                     <?php if ( have_posts() ) : ?>
                         <?php
-                        echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="3" transition="fade"]');
+                        echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="3" transition="fade" button_label="Postari mai vechi"]');
                         ?>
                     <?php else : ?>
                         <?php get_template_part( 'loop-templates/content', 'none' ); ?>
@@ -54,3 +54,4 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
+<?php the_time("F d, Y"); ?>

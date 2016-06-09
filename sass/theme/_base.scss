@@ -84,7 +84,12 @@ h3{
 }
 p{
   font-size: 1.125rem;
-  line-height: 1.75;
+  line-height: 1.6;
+  padding: 1em 0;
+}
+li{
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 html{
   background: $offwhite;
@@ -127,3 +132,19 @@ a:focus{
     }
 }
 
+textarea{
+  resize: none;
+}
+
+body {
+  -webkit-animation-delay: 0.1s;
+  -webkit-animation-name: fontfix;
+  -webkit-animation-duration: 0.1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes fontfix {
+  from { opacity: 1; }
+  to   { opacity: 1; }
+}

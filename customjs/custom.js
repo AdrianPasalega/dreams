@@ -2,7 +2,6 @@
  * Created by samuelmitra on 3/22/2016.
  */
 
-console.log('a');
 $('.btn-nav-form').click(function(){
     $('.nav-input').toggleClass('toggle-search').focus();
 
@@ -50,6 +49,9 @@ $(window).scroll(function(){
     position = $(this).scrollTop();
 });
 
-
-
+$('.back-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
 

@@ -153,7 +153,7 @@ add_action( 'pre_get_posts', 'my_add_reviews' );
 
 function my_custom_posttypes() {
     $labels = array(
-        'name'               => 'Events',
+        'name'               => 'Evenimente',
         'singular_name'      => 'Event',
         'menu_name'          => 'Events',
         'name_admin_bar'     => 'Event',
@@ -228,7 +228,7 @@ function my_custom_posttypes() {
     //Resources
 
     $labels = array(
-        'name'               => 'Resources',
+        'name'               => 'Resurse',
         'singular_name'      => 'Resource',
         'menu_name'          => 'Resources',
         'name_admin_bar'     => 'Resource',
@@ -426,3 +426,90 @@ function my_jquery_enqueue() {
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
     wp_enqueue_script('jquery');
 }
+
+function change_wp_search_size($query) {
+    if ( $query->is_search ) // Make sure it is a search page
+        $query->query_vars['posts_per_page'] = 100; // Change 10 to the number of posts you would like to show
+
+    return $query; // Return our modified query variables
+}
+add_filter('pre_get_posts', 'change_wp_search_size');
+
+function highlight_search_term_placeholders() {
+    static $iter = 0;
+    $ret = "|##{$iter}##|";
+    $iter++;
+    return $ret;
+}
+function highlight_search_term_cb() {
+    static $iter = 0;
+    $ret = "##{$iter}##";
+    $iter++;
+    return $ret;
+}
+function highlight_search_term($text){
+    if(is_search()){
+        $keys = implode('|', explode(' ', get_search_query()));
+        $pattern = '/<[^>].*?>/i';
+        preg_match_all($pattern,$text,$matches);
+        $placeholders = array();
+        foreach ($matches[0] as $v) {
+            $placeholders[] = highlight_search_term_placeholders();
+        }
+        $text = preg_replace_callback($pattern,'highlight_search_term_cb',$text);
+        $pattern2 = '/(' . $keys .')/iu';
+        $text = preg_replace($pattern2, ' <b class="search-term">\1</b> ', $text);
+        $text = preg_replace($placeholders,$matches[0],$text);
+    }
+    return $text;
+}
+
+add_filter( "wpcf7_validate", "email_already_in_db", 10, 2 );
+function email_already_in_db ( $result, $tags ) {
+    // retrieve the posted email
+    $form  = WPCF7_Submission::get_instance();
+    $email = $form->get_posted_data('email_newsletter');
+    // if already in database, invalidate
+    if( email_exists( $email ) )
+        $result->invalidate('email_newsletter', 'Email is already registered with us');
+    // return the filtered value
+    return $result;
+}
+
+
+
+function is_already_submitted($formName, $fieldName, $fieldValue) {
+    require_once(ABSPATH . 'wp-content/plugins/contact-form-7-to-database-extension/CFDBFormIterator.php');
+    $exp = new CFDBFormIterator();
+    $atts = array();
+    $atts['show'] = $fieldName;
+    $atts['filter'] = "$fieldName=$fieldValue";
+    $atts['unbuffered'] = 'true';
+    $exp->export($formName, $atts);
+    $found = false;
+    while ($row = $exp->nextRow()) {
+        $found = true;
+    }
+    return $found;
+}
+
+/**
+ * @param $result WPCF7_Validation
+ * @param $tag array
+ * @return WPCF7_Validation
+ */
+function my_validate_email($result, $tag) {
+    $formName = 'newsletter'; // Change to name of the form containing this field
+    $fieldName = 'email_newsletter'; // Change to your form's unique field name
+    $errorMessage = 'Email is already registered with us'; // Change to your error message
+    $name = $tag['name'];
+    if ($name == $fieldName) {
+        if (is_already_submitted($formName, $fieldName, $_POST[$name])) {
+            $result->invalidate($tag, $errorMessage);
+        }
+    }
+    return $result;
+}
+add_filter('wpcf7_validate_email*', 'my_validate_email', 10, 2);
+
+

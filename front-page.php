@@ -40,13 +40,13 @@ get_header(); ?>
                 </div>
 
                 <div class="content articles box-shadow">
-                    <p class="index-tag">For Blog</p>
+                    <p class="index-tag">De Blog</p>
 
                     <?php get_template_part('post-for-index'); ?>
                 </div>
 
                 <div class="content box-shadow">
-                    <p class="index-tag">Testimonials</p>
+                    <p class="index-tag">Testimoniale</p>
                     <div class="testimonials">
 
                         <?php get_template_part('testimonials-for-index'); ?>

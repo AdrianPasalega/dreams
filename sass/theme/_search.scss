@@ -11,6 +11,10 @@
   .post-date{
     position: relative;
   }
+display: flex;
+  #secondary{
+    order: 1;
+  }
 }
 .search-result{
   a:hover{
@@ -18,6 +22,14 @@
   }
   .page-title{
     font-size: 1.5em;
+    span{
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+    }
   }
   article{
     background: #fff;
@@ -28,29 +40,29 @@
     height: auto;
     border-radius: 5px 5px 0 0;
     }
-  p{
-    line-height: 1.6;
-    font-size: 1em;
-  }
   .entry-title a:hover{
       text-decoration: none;
-    color: $lightred;
+    color: $blue;
   }
 }
 .search-article-content{
   padding: 10px 15px;
+  p{
+    padding-top: 10px;
+  }
   .entry-title{
-    font-size: 1.4em;
+    font-size: 1.7em;
   }
   .entry-content{
     display: flex;
     flex-flow: column;
   }
   .read-more{
-    color: $lightred;
+    color: $blue;
     display: block;
     margin-left: auto;
     padding: 20px 0;
+    font-size: 1.125em;
   }
 
   .post-date{
@@ -80,6 +92,12 @@
 }
 
 
+@media screen and (min-width: 400px){
+  .search-article-content{
+    padding: 25px;
+  }
+}
+
 @media screen and (min-width: 768px) {
 
     #search-wrapper{
@@ -105,3 +123,14 @@
 }
   }
 
+.search-term{
+  background: $lightred;
+  color: #fff;
+}
+
+.blog-widget{
+  .search-term{
+    background: none;
+    color: $darkgreen;
+  }
+}

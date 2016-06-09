@@ -16,7 +16,9 @@
 
 get_header(); ?>
 
-
+<div class="back-to-top">
+    <a href="javascript:"><i class="fa fa-arrow-circle-up"></i> </a>
+</div>
 
         <div id="primary" class=" content-area">
         <div class="container">

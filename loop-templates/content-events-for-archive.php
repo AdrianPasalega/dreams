@@ -29,7 +29,6 @@ add_filter('the_excerpt', 'limit_words_30');    the_excerpt(); }  ?>
                                 <a href =<?php echo $b ?> ><button class='btn-blue-submit' type='button'>Inscrie-te</button></a>
                         <?php } else { ?>
 
-                            <a href =<?php the_permalink(); ?> ><button class='btn-blue-submit' type='button'>Inscrie-te</button></a>
 
                         <?php } ?>
                     <?php } ?>

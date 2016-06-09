@@ -1,3 +1,7 @@
+#contact-container{
+  display: flex;
+}
+
 .contact-main {
   background: #fff;
   padding: 1.5em;
@@ -6,10 +10,7 @@
     font-size: 1.7em;
     font-weight: bold;
   }
-  p {
-    line-height: 1.5;
-    font-size: 1em;
-  }
+
   input {
     background: transparent;
     border: none;
@@ -61,25 +62,32 @@
 }
 
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 780px){
   .contact-main{
     padding: 2.5em;
+    .wpcf7-form {
+      p:first-of-type{
+        padding-bottom: 0;
+      }
+      input[type="submit"] {
+        margin-bottom: 0;
+      }
+    }
+    .map-row{
+      margin-bottom: 1em;
+    }
   }
+  .g-recaptcha{
+    margin-top: 1.5em;
+  }
+
 #contact-m-container{
   display: flex;
   align-items: flex-end;
 }
-  .contact-main .wpcf7-form input[type="submit"]{
-    margin-bottom: 0;
-  }
+
 }
 
-
-@media screen and (min-width: 992px){
-  .contact-form-container{
-
-  }
-}
 
 @media screen and (min-width: 1200px) {
 
@@ -101,8 +109,7 @@
     }
   }
   .contact-main .wpcf7-form {
-    margin: 30px 0 0 0;
-
+margin-top: 0;
 
     input {
       width: auto;
@@ -116,11 +123,15 @@
       float: left;
     }
   }
+}
+@media screen and (max-width: 350px) {
+  .g-recaptcha {
+    width: 300px;
 
-
+    border-radius: 4px;
+    border-right: 1px solid #d8d8d8;
+    overflow: hidden;
+    margin-left: -25px;
+  }
 }
 
-
-#contact-container{
-  display: flex;
-}

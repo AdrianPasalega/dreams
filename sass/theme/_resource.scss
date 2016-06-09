@@ -33,17 +33,17 @@
   justify-content: space-around;
   .entry-header {
     position: absolute;
-    bottom: 101%;
+    bottom: 100.5%;
     .post-date{
       position: relative;
+      padding: 0;
     }
   }
   .entry-title {
-    font-size: 1.2em;
+    font-size: 1.7em;
     color: #fff;
-    font-weight: bold;
+    font-weight: 500;
     text-shadow: 2px 2px rgba(0, 0, 0, .5);
-    padding: 0 5px 5px 0;
 
 
   }
@@ -135,16 +135,6 @@ span{
 }
 
 
-@media screen and (min-width: 400px) {
-    .resource-content{
-
-      .entry-title{
-        font-size: 1.2em;
-      }
-    }
-
-    }
-
 @media screen and (min-width: 450px) {
 .res-meta-list{
   li{
@@ -156,13 +146,10 @@ span{
 
 
 
-@media screen and (min-width: 550px) {
-  .resource-content{
-    .entry-title{
-      font-size: 1.3em;
+@media screen and (max-width: 500px){
+    .resource-content .entry-title{
+      font-size: 1.4em;
     }
-
-  }
 }
 
 @media  screen and (min-width: 550px) {
@@ -269,15 +256,12 @@ margin-top: 50px;
   }
 .entry-header{
 padding-left: 20px;
+  bottom: 101%;
   .post-date{
     line-height: 1.5;
   }
 
 }
-  .entry-title{
-    font-size: 1.5em;
-  }
-
 }
 
 }
@@ -322,7 +306,6 @@ padding-left: 20px;
 .res-meta-6{
   display: flex;
   flex-wrap: wrap;
-  margin: 2em 0;
 li{
   display: flex;
   flex: 0 0 100%;

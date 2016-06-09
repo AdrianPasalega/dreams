@@ -12,7 +12,7 @@ while ( $t->have_posts() ) : $t->the_post();;
     <aside>
     <i class="fa fa-quote-right fa-5x"></i>
   <blockquote>
-     <p> <?php the_content(); ?></p>
+      <?php the_content(); ?>
       </blockquote>
         <p class="author"> <?php if (get_post_meta( get_the_ID(), 'Author', true )) {
             $a =  get_post_meta( get_the_ID(), 'Author', true );

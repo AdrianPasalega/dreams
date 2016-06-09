@@ -10,16 +10,16 @@ main {
     background: #fff;
     padding: 20px 20px;
     border-radius: 5px;
-    h2+p {
-      margin: 1em 0;
-      line-height: 1.6;
-      font-size: 1em;
-    }
+
 
   } //CONTENT
 
   .main-evt {
   text-align: center;
+    .wp-post-image{
+      width: 100%;
+      height: auto;
+    }
     a {
       color: $blue;
     }
@@ -40,12 +40,10 @@ main {
       margin: 10px 0;
 
       h2 {
-        font-size: 1.4em;
         padding-top: .5em
       }
       a {
         color: $blue;
-        font-weight: bold;
         display: block;
         padding-top: 1em;
       }
@@ -62,7 +60,7 @@ main {
   padding: .7em 0;
   width: 70%;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   margin-top: -13%;
   margin-left: 3px;
   font-size: 1em;
@@ -86,20 +84,19 @@ main {
 .testimonials {
   aside {
     text-align: center;
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2em;
+    p{
+      font-size: 1em;
+      font-weight: 300;
+    }
     .author {
       padding-top: 1em;
       font-size: 1em;
       font-weight: bold;
     }
-    p{
-      line-height: 1.6;
-      font-size: 1em;
 
-    }
     i{
       color: #f1f1f1;
       font-size: 7em;
@@ -142,6 +139,9 @@ main {
     }
   }
 }
+  .testimonials aside{
+    width: 80%;
+  }
 }
 
 @media  screen and (min-width: 767px) {
@@ -151,7 +151,7 @@ main {
       article {
         margin-top: 20px;
         p{
-          padding: 0 4em;
+          padding: 1em 4em;
 
         }
       }
@@ -174,7 +174,7 @@ main {
       content: "";
       display: block;
       width: 0; height: 0;
-      top:28px;
+      top: 34px;
       left: 2px;
       border-left: 8px solid transparent;
       border-top: 8px solid rgba(75,76,76,.7);
@@ -210,18 +210,11 @@ main {
 
 
 
-@media screen and (max-width: 902px){
-  .testimonials{
- padding-top: 40px;
-  }
-}
+
 
 @media screen and (min-width: 900px) {
   .index-tag {
     margin-left: -31px;
-    &::after {
-    top: 31px;
-    }
   }
 
   .testimonials {
@@ -232,9 +225,7 @@ main {
       flex: 0 0 calc(25% - .5em);
       display: flex;
       flex-flow: column wrap;
-      p {
-        font-size: .9em;
-      }
+
       .author {
         margin-top: auto;
       }
@@ -245,7 +236,7 @@ main {
 @media screen and (min-width: 1200px) {
   .index-tag {
     &::after {
-      top: 32px;
+      top: 37px;
       left: 2px;
     }
   }
@@ -265,7 +256,7 @@ main {
         margin-left: auto;
         margin-right: auto;
         p {
-          padding: 0;
+          padding: 1em 0;
         }
       }
 
