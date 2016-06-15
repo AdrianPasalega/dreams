@@ -12,12 +12,12 @@ $events = new WP_Query( $args );
 while ( $events->have_posts() ) : $events->the_post();
     ?>
     <p class="index-tag">Evenimente viitoare</p>
-    <article>
+    <article class="aaa">
         <h2><a href=<?php the_permalink(); ?> ><?php echo get_the_title()  ?></a></h2>
         <?php
         if(has_excerpt($post->ID)){
             add_filter('the_excerpt', 'limit_words_30');    the_excerpt(); }  ?>
-
+</p>
 <ul class="index-event-info">
             <?php if (get_post_meta( get_the_ID(), 'Date', true )) {
     $a =  get_post_meta( get_the_ID(), 'Date', true );

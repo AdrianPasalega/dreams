@@ -25,46 +25,31 @@ if (!has_post_thumbnail() ) {
 
     <div class="row">
         <div class="col-xs-12">
-
             <div class="event-content">
-
-
-
                 <div class="entry-content col-md-9 ">
                     <div class="entry-main ">
-
                         <?php the_content(); ?>
-
-
                     </div>
-
-
                 </div>
-
-
-
-
                 <div class="entry-second col-xs-12 col-md-3">
-
-                <div class="post-details">
-                    <ul class="post-event-info" >
-                    <?php if (get_post_meta( get_the_ID(), 'Date', true )) {
-            $a =  get_post_meta( get_the_ID(), 'Date', true );
-            echo "<li><i class=\"fa fa-calendar\"></i>$a</li>" ;
-        }
-        ?>
-                        <?php if (get_post_meta( get_the_ID(), 'Time', true )) {
-            $a =  get_post_meta( get_the_ID(), 'Time', true );
-            echo "<li><i class=\"fa fa-clock-o\"></i>$a</li>" ;
-        }
-      ?>
-                        <?php if (get_post_meta( get_the_ID(), 'Location', true )) {
-            $a =  get_post_meta( get_the_ID(), 'Location', true );
-            echo "<li><i class=\"fa fa-map-marker\"></i>$a</li>" ;
-        }
-     ?>
-
-                    </ul>
+                  <div class="post-details">
+                        <ul class="post-event-info" >
+                            <?php if (get_post_meta( get_the_ID(), 'Date', true )) {
+                            $a =  get_post_meta( get_the_ID(), 'Date', true );
+                            echo "<li><i class=\"fa fa-calendar\"></i>$a</li>" ;
+                            }
+                            ?>
+                            <?php if (get_post_meta( get_the_ID(), 'Time', true )) {
+                                $a =  get_post_meta( get_the_ID(), 'Time', true );
+                                echo "<li><i class=\"fa fa-clock-o\"></i>$a</li>" ;
+                            }
+                            ?>
+                            <?php if (get_post_meta( get_the_ID(), 'Location', true )) {
+                                $a =  get_post_meta( get_the_ID(), 'Location', true );
+                                echo "<li><i class=\"fa fa-map-marker\"></i>$a</li>" ;
+                            }
+                            ?>
+                         </ul>
 
                     <dl>
                         <?php if (get_post_meta( get_the_ID(), 'Contribution', true )) {
@@ -79,41 +64,34 @@ if (!has_post_thumbnail() ) {
         }
     ?>
           </dl>
-                    <div class="btn-container">
-                        <?php if (get_post_meta( get_the_ID(), 'Expiration Date', true )) {
-                            $a =  get_post_meta( get_the_ID(), 'Expiration Date', true );
-                            $date = new DateTime($a);
-                            $now = new DateTime();
-                            if($date < $now) { ?>
+                                <div class="btn-container">
+                                    <?php if (get_post_meta( get_the_ID(), 'Expiration Date', true )) {
+                                        $a =  get_post_meta( get_the_ID(), 'Expiration Date', true );
+                                        $date = new DateTime($a);
+                                        $now = new DateTime();
+                                        if($date < $now) { ?>
 
-                            <?php } else {
-                                if (get_post_meta( get_the_ID(), 'subscribe_to_event_link', true )) {
-                                    $b = get_post_meta(get_the_ID(), 'subscribe_to_event_link', true);
-                                    ?>
-                                    <a href =<?php echo $b ?> ><button class='btn-blue-submit' type='button'>Inscrie-te</button></a>
-                                <?php } else { ?>
+                                        <?php } else {
+                                            if (get_post_meta( get_the_ID(), 'subscribe_to_event_link', true )) {
+                                                $b = get_post_meta(get_the_ID(), 'subscribe_to_event_link', true);
+                                                ?>
+                                                <a href =<?php echo $b ?> ><button class='btn-blue-submit' type='button'>Inscrie-te</button></a>
+                                            <?php } else { ?>
 
 
-                                <?php } ?>
-                            <?php } ?>
-                        <?php } ?>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    <?php } ?>
+                                </div>
+
+                            </ul>
+                        </div>
                     </div>
-
-                    </ul>
                 </div>
-                </div>
-
-            </div>
-
-        </div><!-- .entry-content -->
+            </div><!-- .entry-content -->
+        </div>
     </div>
-    </div>
-    <footer class="entry-footer">
 
-        <?php
-        understrap_entry_footer(); ?>
-
-    </footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
 

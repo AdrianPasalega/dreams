@@ -25,8 +25,9 @@
 
 		<div class="post-content">
 			<div class="entry-content">
-				<p class="post-tags"><i class="fa fa-tags"></i> <small>Tags:</small> <?php echo get_the_tag_list('',' ','')?></p>
 				<?php the_content(); ?>
+				<p class="post-tags"><i class="fa fa-tags"></i> <small>Tags:</small> <?php echo get_the_tag_list('',' ','')?></p>
+
 			</div><!-- .entry-content -->
 			</div>
 

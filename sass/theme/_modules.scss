@@ -1,3 +1,68 @@
+.input-group {
+  .show-text{
+    opacity: 1;
+    transition: opacity .1s .4s ease;
+
+  }
+}
+
+  .placeholder-for-searcher {
+    opacity: 0;
+    position: absolute;
+    transition: opacity .1s ease;
+    padding-top: 10px;
+    @media screen and (min-width: 769px) {
+              top: 50px;
+          left: -275px;
+    }
+  }
+
+
+  .placeholder-for-footer{
+    position: absolute;
+    width: 100%;
+    text-transform: uppercase;
+    top: 17px;
+   @media screen and (min-width: 700px) {
+          font-size: 0.8em;
+          width: 64%;
+          top: 22px;
+        }
+    @media screen and (min-width: 992px){
+      width: 70%;
+    }
+  }
+
+.pagination-nav{
+  text-align: center;
+}
+.page-numbers{
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  background: #1976d3;
+  color: #fff;
+  &:focus{
+    color: #fff;
+  }
+  &:hover{
+    color: #fff;
+  }
+  &.current{
+  background: none;
+  color: $darkgreen;
+  }
+  &.next{
+    width: 4em;
+  }
+  &.prev{
+    width: 6em;
+
+  }
+}
+
+
 
 .icon {
   display: inline-block;
@@ -14,13 +79,18 @@
 .overlay {
   position: absolute;
   top: 0;
-  bottom: 2px;
   left: 0;
   right: 0;
+  bottom:0;
   opacity: .9;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, .0) , #000);
 }
 
+
+[class*=" mashicon-"] .text, [class^="mashicon-"] .text{
+    text-indent: 0;
+  display: inline-block;
+}
 
 
 .mashsb-box .mashsb-buttons a{
@@ -31,7 +101,7 @@
 .mashicon-facebook{
   background: none;
 .icon{
-  line-height: 1.6em;
+  line-height: 1.4em;
 }
   .text{
     font-size: 1em;
@@ -83,22 +153,37 @@ i{
 
 .back-to-top{
   position: fixed;
-  bottom: 1em;
+  bottom: -3.5em;
   left:1em;
-  display: none;
   transition: bottom ease-out 400ms;
   z-index: 100;
   .fa{
     color: $blue;
-    font-size: 2.5em;
+    font-size: 3.5em;
   }
 }
 .back-to-top.display{
   display: block;
 }
-.back-to-top.slide-out{
-  bottom: -2.5em;
+.back-to-top.slide-in{
+  bottom: 2em;
 
+}
+
+#load-more:focus{
+    outline: none;
+}
+
+.single-stc{
+  .entry-header{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    @media screen and (max-width: 768px){
+          .entry-title{
+margin-top: 20px;
+          }
+    }
+  }
 }
 
 @media screen and (min-width: 400px) {
@@ -113,6 +198,19 @@ i{
     .social-media-p{
       padding-bottom: 0;
     }
+  }
+}
+
+
+@media screen and (max-width: 568px){
+  .mashsb-buttons a{
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 569px){
+  .mashsb-box .mashsb-buttons a{
+    text-align: left;
   }
 }
 
@@ -144,7 +242,7 @@ i{
 
 @media screen and (min-width: 992px){
   .social-media{
-    padding-left: 1em;
+    padding-left: 1.4em;
   }
 
 }
@@ -160,7 +258,7 @@ i{
     }
   }
   .social-media{
-    padding-left: 4em;
+    padding-left: 4.4em;
   }
   .social-media-p{
     padding-left: 5em;

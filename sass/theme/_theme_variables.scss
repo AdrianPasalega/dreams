@@ -4,7 +4,6 @@
 // As example you find one of the most important Bootstrap variable below: $brand-primary.
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
-
 $brand-primary:         #0CB4CE; //#ff6d5a
 
 // Basics of a navbar
@@ -23,7 +22,7 @@ $darkred: rgba(242,98,98, .7);
 $gainsboro: #cad5e0;
 $meta-gray: #a8a8a8;
 
-$font-main: 'Fira Sans', 'Open Sans';
+$font-main:  'Open Sans';
 $font-heading: 'Fira Sans','Open Sans';
 $font-color: $darkgreen;
 $label-color: $mustard;

@@ -1,17 +1,36 @@
 .gallery{
-  .flow-gallery{
+  .flow-gallery .albums.stacked figcaption .number{
+    background-color: $blue;
+  }
+  .col-lg-12{
     background: #fff;
+    padding-bottom: 20px;
+    border-radius: 5px;
+  }
+  .flow-gallery{
     border-radius: 5px;
     min-width: 100%;
     .mdi-social-share, .mdi-action-pageview{
       color: $blue;
     }
+    .flow-menu.album-menu{
+      padding-top: 1.8em;
+      margin-bottom: 35px;
+      @media screen and (min-width: 768px){
+          padding-top: 1.5em;
+        margin-bottom: 55px;
+        }
+      @media screen and (min-width: 1200px){
+        padding-top: 2.5em;
+      }
+
+    }
     .flow-menu{
       box-shadow: none;
       .mdi-navigation-arrow-back{
         color: $blue;
-
       }
+
       i{
         color: $darkgreen;
       }
@@ -21,36 +40,46 @@
       }
       .album-name span{
         color: $darkgreen;
+        overflow: inherit;
+        font-size: 1.7em;
+        font-weight: bold;
       }
+
       .home span{
-      color: $darkgreen;}
+      color: $darkgreen;
+      font-size: 1.7em;
+        font-weight: bold;
+      overflow: inherit;
+      }
+    .home{
+      padding-top: 1.5em;
+      @media screen and(min-width: 768px){
+        padding-left: 1.5em;
+      }
+      @media screen and (min-width: 1200px){
+        padding-top: 2.5em;
+        padding-left: 2.5em;
+      }
+    }
+
     }
     .albums{
       padding-top: 40px;
     }
-    @media screen and (min-width: 768px){
-      box-shadow:  0 0 5px 1px hsla(180,1%,69%,.9);
+
+    .mdi-action-pageview{
+      font-size: 2em;
     }
   }
 }
 
-@media screen and (min-width: 750px) and (max-width: 992px){
-        .gallery{
-          .flow-gallery {
-            .albums {
-              ul {
-              display: flex;
-              width: 90%;
-              justify-content: space-between;
-            }
-            li{
-              margin-right: 0;
-          }
-          }
-
-        }
-        }
+@media screen and (min-width: 768px){
+ .gallery .col-lg-12{
+   box-shadow:  0 0 5px 1px hsla(180,1%,69%,.9);
+ }
 }
+
+
 
 
 @media screen and (max-width: 390px) {
@@ -91,9 +120,7 @@
 
 @media screen and (min-width: 1200px){
   .flow-gallery{
-    padding: 2em;
     .item.filtered {
-     width: 30% !important;
    }
    .item img{
      width: 100% !important;

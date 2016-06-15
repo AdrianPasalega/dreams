@@ -10,11 +10,12 @@ function understrap_scripts() {
     wp_enqueue_style( 'understrap-local-fonts', get_stylesheet_directory_uri() . '/fonts/custom-fonts.css');
 
     // Unregister the default jQuery
-    wp_deregister_script('jquery');  
+    wp_deregister_script('jquery');
 
        
     wp_enqueue_script( 'understrap-main', get_template_directory_uri() . '/js/theme.min.js', array(), '0.3.8', true );
     wp_enqueue_script( 'custom', get_template_directory_uri() . '/customjs/custom.js', array(), '0.0.1', true );
+    wp_enqueue_script('jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js', array('jquery'), '1.11.4');
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );

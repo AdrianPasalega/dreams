@@ -12,7 +12,7 @@ $('.btn-nav-form').click(function(){
 
 $('.searcher').click(function(){
     $('.search-menu-input').toggleClass('toggle-search').focus();
-
+    $('.placeholder-for-searcher').toggleClass('show-text');
 
 });
 
@@ -30,8 +30,8 @@ if ($("#resource-list li").length > 5){
 var position, direction, previous;
 
 $(window).scroll(function(){
-  if($(this).scrollTop() > 100){ $('.back-to-top').addClass('display');}else{$('.back-to-top').removeClass('display');}
-    if( $(this).scrollTop() >= position ){
+  if($(this).scrollTop() > 100){ $('.back-to-top').addClass('slide-in');}else{$('.back-to-top').removeClass('slide-in');}
+ /*   if( $(this).scrollTop() >= position ){
         direction = 'down';
         if(direction !== previous){
             $('.back-to-top').addClass('slide-out');
@@ -45,7 +45,7 @@ $(window).scroll(function(){
 
             previous = direction;
         }
-    }
+    }*/
     position = $(this).scrollTop();
 });
 
@@ -54,4 +54,30 @@ $('.back-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
+
+$(".search-menu-input").bind("change paste keyup", function() {
+    $(".placeholder-for-searcher").hide();
+    if($(this).val() == "") {
+        $(".placeholder-for-searcher").css("display","inline-block");
+    }
+});
+
+$(".search-menu-input").bind("change paste keyup", function() {
+    $(".placeholder-for-searcher").hide();
+    if($(this).val() == "") {
+        $(".placeholder-for-searcher").css("display","inline-block");
+    }
+});
+
+$("#inputEmail3").bind("change paste keyup", function() {
+    $(".placeholder-for-footer").hide();
+    if($(this).val() == "") {
+        $(".placeholder-for-footer").css("display","inline-block");
+    }
+});
+
+
+
+$(".single-stc .nav-breadcrumbs span").last().text("Comment Manager");
+
 

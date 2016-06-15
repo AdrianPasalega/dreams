@@ -79,7 +79,8 @@
                             <div class="header-search">
                                 <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
                                     <div class="input-group">
-                                        <input type="text" class=" search-menu-input" name="s" id="s" placeholder="<?php esc_attr_e( 'Cauta &hellip;', 'understrap' ); ?>" />
+                                        <span class="placeholder-for-searcher"><?php esc_attr_e( 'Cauta', 'understrap' ); ?></span>
+                                        <input type="text"  id="header-search-input" class="search-menu-input" name="s" id="s" >
 			                            <span class="input-group-btn">
                                             <button type="button" class="searcher" name="submit"  value="<?php esc_attr_e( 'Search', 'understrap' ); ?>" />
 			                                </span>

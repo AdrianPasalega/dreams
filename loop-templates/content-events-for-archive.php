@@ -57,10 +57,8 @@ add_filter('the_excerpt', 'limit_words_30');    the_excerpt(); }  ?>
 
 
             <?php echo the_post_thumbnail('event-archive-image'); ?>
-</div>
-    <?php understrap_entry_footer(); ?>
 
-    </footer><!-- .entry-footer -->
+
 
 </article><!-- #post-## -->
 

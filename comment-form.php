@@ -2,7 +2,10 @@
 <?php if ( comments_open() ) : ?>
 
     <!-- Kommentar eingeben -->
+    <div class="social-media">
+        <?php echo do_shortcode("[mashshare]"); ?>
 
+    </div>
             <h3><?php _e( 'Write Comment.', 'understrap' ); ?> <small class="text-danger"><?php _e( '*Mandatory', 'understrap' ); ?></small></h3>
 
             <input type="hidden" name="redirect_to" value="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>" />

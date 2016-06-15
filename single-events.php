@@ -13,7 +13,6 @@ get_header(); ?>
 
             <?php get_template_part( 'loop-templates/content', 'events' ); ?>
 
-            <?php understrap_post_nav(); ?>
 
 
 

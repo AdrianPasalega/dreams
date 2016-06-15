@@ -498,6 +498,24 @@ function is_already_submitted($formName, $fieldName, $fieldValue) {
  * @param $tag array
  * @return WPCF7_Validation
  */
+function strpos_array($haystack, $needles) {
+    if ( is_array($needles) ) {
+        foreach ($needles as $str) {
+            if ( is_array($str) ) {
+                $pos = strpos_array($haystack, $str);
+            } else {
+                $pos = strpos($haystack, $str);
+            }
+            if ($pos !== FALSE) {
+                return $pos;
+            }
+        }
+    } else {
+        return strpos($haystack, $needles);
+    }
+}
+
+
 function my_validate_email($result, $tag) {
     $formName = 'newsletter'; // Change to name of the form containing this field
     $fieldName = 'email_newsletter'; // Change to your form's unique field name
@@ -508,8 +526,55 @@ function my_validate_email($result, $tag) {
             $result->invalidate($tag, $errorMessage);
         }
     }
-    return $result;
+    $strlen = strlen( $_POST[$name] );
+    $aa = array("#","!","`","$","%","^","*","(",")",":","{","}","[","]",";","?","~");
+    for( $i = 0; $i <= $strlen; $i++ ) {
+        $char = substr( $_POST[$name], $i, 1 );
+            if(in_array($char, $aa)){
+                $errorMessage = "The e-mail address entered is invalid";
+                $result->invalidate($tag, $errorMessage);
+    }
+    }
+        return $result;
 }
 add_filter('wpcf7_validate_email*', 'my_validate_email', 10, 2);
 
 
+
+function my_validate_email_contact($result,$tag){
+    $form  = WPCF7_Submission::get_instance();
+    $email = $form->get_posted_data('email_contact');
+
+    $strlen = strlen( $email );
+    $aa = array("#","!","`","$","%","^","*","(",")",":","{","}","[","]",";","?","~");
+    for( $i = 0; $i <= $strlen; $i++ ) {
+        $char = substr( $email, $i, 1 );
+        if(in_array($char, $aa)){
+            $errorMessage = "a";
+            $result->invalidate($tag, $errorMessage);
+        }
+    }
+    return $result;
+
+}
+
+
+function highlight_results($text){
+    if(is_search()){
+        $keys = implode('|', explode(' ', get_search_query()));
+        $text = preg_replace('/(' . $keys .')/iu', '<span class="search-highlight">\0</span>', $text);
+    }
+    return $text;
+}
+add_filter('the_content', 'highlight_results');
+add_filter('the_excerpt', 'highlight_results');
+add_filter('the_title', 'highlight_results');
+
+function highlight_results_css() {
+    ?>
+    <style>
+        .search-highlight { background-color:#FF0; font-weight:bold; }
+    </style>
+    <?php
+}
+add_action('wp_head','highlight_results_css');
