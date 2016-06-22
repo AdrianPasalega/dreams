@@ -25,6 +25,7 @@
     input{
       width: 100%;
     }
+
     .wpcf7-validation-errors{
     display: none !important;
     }
@@ -44,6 +45,9 @@
       margin-top: 15px;
       font-size: .9em;
     }
+  }
+  .wpcf7-spam-blocked{
+    color: $lightred;
   }
 }
 #contact-text{

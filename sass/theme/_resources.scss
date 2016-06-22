@@ -35,7 +35,7 @@
   padding-top: 1em;
     color: $blue;
     text-transform: uppercase;
-    max-width: 100px;
+    max-width: 6em;
   }
 }
 
@@ -50,10 +50,13 @@
   position: absolute;
   padding: 0 1.5em;
   bottom: 10%;
-  font-size: 1.3em;
   text-shadow: 2px  2px rgba(0,0,0,.5);
   font-weight: bold;
   z-index: 1;
+  font-size: 1.7em;
+  @media screen and (max-width: 400px){
+    font-size: 1.4em;
+  }
 }
 .res-meta-list{
   i{

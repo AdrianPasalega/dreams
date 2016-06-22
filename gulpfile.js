@@ -17,10 +17,7 @@ var merge2 = require('merge2');
 var ignore = require('gulp-ignore');
 var rimraf = require('gulp-rimraf');
 
-
-
-
-
+var gulp = require('gulp');
 // Run: 
 // gulp sass
 // Compiles SCSS files in CSS

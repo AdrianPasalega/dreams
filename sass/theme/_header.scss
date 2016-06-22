@@ -207,6 +207,15 @@ outline: none;
 
 }
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .navbar .header-search .toggle-search{
+    width: 180px;
+  }
+ .input-group  .placeholder-for-searcher{
+    left: -153px;
+  }
+}
+
 
 @media screen and (min-width: 1200px) {
   .navbar-brand {

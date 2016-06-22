@@ -81,3 +81,6 @@ $("#inputEmail3").bind("change paste keyup", function() {
 $(".single-stc .nav-breadcrumbs span").last().text("Comment Manager");
 
 
+if($("#inputEmail3").val() !== ""){$(".placeholder-for-footer").hide()}else{
+    $(".placeholder-for-footer").show();
+}

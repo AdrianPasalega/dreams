@@ -13,7 +13,6 @@ get_header(); ?>
 
                 <?php get_template_part( 'loop-templates/content', 'resources' ); ?>
 
-                <?php understrap_post_nav(); ?>
 
 
 
@@ -27,6 +26,5 @@ get_header(); ?>
   <!-- .row -->
 
 </div><!-- Container end -->
-
 
 <?php get_footer(); ?>

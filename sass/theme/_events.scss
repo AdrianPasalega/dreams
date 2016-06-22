@@ -81,7 +81,6 @@
   }
   li a {
     display: flex;
-    font-size: 1em;
     color: $blue;
     i {
       margin-right: 5px;
@@ -100,6 +99,7 @@
 }
 .events-info li{
   color: $blue;
+  font-size: 1em;
   i{
     margin-right: 5px;
   }
@@ -144,9 +144,9 @@
     }
   }
   .events-info {
-    font-size: .8em;
     li {
       padding: .5em;
+      font-size: .9em;
     }
   }
 
@@ -157,7 +157,7 @@
   .events-info {
 li{
 
-  font-size: 1.2em;
+  font-size: 1em;
 
 }  }
 }
@@ -178,6 +178,7 @@ li{
       li {
         display: flex;
         line-height: 1.2;
+        font-size: .9em;
       }
     }
   }

@@ -29,7 +29,7 @@ if ( post_password_required() ) {
 
 			<?php
 			if (get_comments_number() > 3) {
-				echo do_shortcode('[ajax_load_more comments="true" order=DESC comments_post_id="'.get_the_ID().'" comments_type="all"   comments_per_page="2" button_label = "Vizualizez?"]');
+				echo do_shortcode('[ajax_load_more comments="true" order=DESC comments_post_id="'.get_the_ID().'" comments_type="all"   comments_per_page="2" button_label = "Vezi comentarii"]');
 
 			}else{
 				wp_list_comments(array(

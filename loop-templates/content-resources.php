@@ -105,8 +105,6 @@ if (!has_post_thumbnail() ) {
     </div>
     <footer class="entry-footer">
 
-        <?php
-        understrap_entry_footer(); ?>
 
     </footer><!-- .entry-footer -->
 

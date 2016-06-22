@@ -100,6 +100,11 @@ html{
 }
 
 body{
+  background-image: -webkit-linear-gradient($lightgreen,  $offwhite 50%);
+
+  color: $font-color;
+  background-repeat: no-repeat;
+;
 background-image: (linear-gradient($lightgreen,  $offwhite 50%));
 
   color: $font-color;
@@ -107,8 +112,8 @@ background-image: (linear-gradient($lightgreen,  $offwhite 50%));
 
 }
 
-h1, h2, h3, h4, h5{
-  line-height: 1.5;
+ h2, h3, h4, h5{
+  line-height: 1.8;
 }
 
 a{

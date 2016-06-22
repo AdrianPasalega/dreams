@@ -578,3 +578,4 @@ function highlight_results_css() {
     <?php
 }
 add_action('wp_head','highlight_results_css');
+
